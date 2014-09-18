@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU" id="no-js" xmlns='http://www.w3.org/1999/xhtml' xmlns:og="http://opengraphprotocol.org/schema/">
+<head>
+  <meta charset="UTF-8">
+
+  <title><%= meta_tag 'og:title' %></title>
+  <%= meta_tags %>
+
+  <script type="text/javascript">
+    document.documentElement.id = 'js';
+    var url_prefix = '<%= root_path %>';
+  </script>
+
+  <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--[if IE]><xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v" /><![endif]-->
+
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= lam_auth_include_tag %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+  <%= render("_/google_analytics") if Rails.env.production? %>
+</head>
+<body>
+  <div id="village-root"></div>
+  <%= lam_auth_init_tag %>
+  <%= yield %>
+  <%= render :partial => '_/sharing_includes' %>
+</body>
+</html>

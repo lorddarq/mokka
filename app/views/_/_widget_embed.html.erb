@@ -1,0 +1,59 @@
+<%
+  options ||= nil
+  get_params = options ? options.slice!(:id, :width, :height, :collapsed, :semiexpanded, :expanded) : {local: 1}
+  id = options.delete(:id) if options
+  id ||= "mokka_widget"
+  width = options.delete(:width) if options
+  width ||= 990
+  height = options.delete(:height) if options
+  height ||= 250
+  options_rendered = (options && !options.empty?) ? options.to_json.sub!(/^\{/, '').sub!(/\}$/, '') : false
+%>
+
+<iframe id="<%= id %>" name="<%= id %>" src="<%= widget_path(get_params) %>" width="<%= width %>" height="<%= height %>" scrolling="no" frameborder="0" data-type="lam-widget"></iframe>
+<script>
+(function(w) {
+  if(!w.LAMWidget) {
+    w.LAMWidget = function(widget_id, data) {
+      w.LAMWidget.data[widget_id] = data;
+    };
+    w.LAMWidget.data = {};
+    w.LAMWidget.listener = function(event) {
+      try {
+        var data = JSON.parse(event.data);
+        var $widget = data.lamwidget && $('#' + data.lamwidget);
+        if (!$widget || !$widget.length) return true;
+        if (data.call == 'init') {
+          data.result = w.LAMWidget.data[data.lamwidget];
+        } else if (data.call === 'bind') {
+          var event = data.arguments[0], props = data.arguments[1];
+          $(w).on(event, function(e) {
+            data.result = [];
+            for(var i=0; i<props.length; i++) {
+              var p = props[i].split('.');
+              var o = p[0], k = p[1];
+              data.result.push({ 'window': w, 'event': e.originalEvent }[o][k]);
+            }
+            $widget[0].contentWindow.postMessage(JSON.stringify(data), '*');
+          });
+          return;
+        } else if (data.call === 'unbind') {
+          $(w).off(data.arguments[0]);
+          return;
+        }
+        else {
+          data.result = $widget[data.call].apply($widget, data.arguments);
+        }
+        $widget[0].contentWindow.postMessage(JSON.stringify(data), '*');
+      } catch(e) {}
+    }
+    if (w.addEventListener) w.addEventListener("message", w.LAMWidget.listener, false);
+    else w.attachEvent("onmessage", w.LAMWidget.listener);
+  }
+  w.LAMWidget('<%= id %>', {
+    <%= raw("#{options_rendered},") if options_rendered %>
+    link: "%REFERENCE%",
+    events: { event_1: '%event1%', event_2: '%event2%', event_3: '%event3%', event_4: '%event4%', event_5: '%event5%', event_6: '%event6%', event_7: '%event7%', event_8: '%event8%', event_9: '%event9%', event_10: '%event10%', event_11: '%event11%', event_12: '%event12%', event_13: '%event13%', event_14: '%event14%', event_15: '%event15%', event_16: '%event16%', event_17: '%event17%', event_18: '%event18%', event_19: '%event19%', event_20: '%event20%' }
+  });
+})(window);
+</script>

@@ -1,0 +1,13 @@
+development: &development
+  adapter: mysql2
+  username: root
+  password:
+  database: mokka
+  encoding: utf8
+
+production:
+  <<: *development
+
+test:
+  <<: *development
+  database: mokka_test

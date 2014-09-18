@@ -1,0 +1,31 @@
+/*
+ * This file is for libs import and common vars definition, to be included in
+ * every other stylesheet.
+ *
+ * Please, don't add any style rules there.
+ *
+ */
+
+
+/* Framework setup
+---------------------------------------- */
+
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/css3";
+
+$default-transition-duration: .3s;
+
+@import "widget_base";
+
+
+/*
+ * Color vars
+ */
+// $example-color: #000;
+
+/*
+ * Fonts
+ */
+// $example-font-family: 'example-font', $default-font-family;
+$base-font-family: $default-font-family;

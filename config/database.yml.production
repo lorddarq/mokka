@@ -1,0 +1,9 @@
+development: &development
+  adapter: mysql2
+  username: mokka
+  database: mokka_production
+  password: 
+
+production:
+  <<: *development
+

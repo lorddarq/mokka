@@ -1,0 +1,49 @@
+/* Widget styles related with states
+---------------------------------------- */
+
+$widget-width: get-state-width();
+$widget-height: get-state-height();
+
+.h-widget {
+  width:$widget-width;
+  position:relative; z-index:1;
+  margin:0;
+  background:$background-color;
+  }
+.b-widget {
+  width:($widget-width - $border-width * 2); height:($widget-height - $border-width * 2);
+  overflow:hidden;
+  position:relative; z-index:1;
+  text-align:left;
+  border:$border-width solid $border-color;
+  background:$background-color;
+  }
+
+@each $state in $states {
+  .b-widget_#{$state} {
+    width: (get-state-width($state) - $border-width * 2);
+    height: (get-state-height($state) - $border-width * 2);
+    }
+  }
+
+
+/* Views
+---------------------------------------- */
+
+.b-view {
+  position:absolute; z-index:1;
+  left:0; top:0;
+  margin:(-$border-width);
+  overflow:hidden;
+  }
+@each $state in $states {
+  .b-view_#{$state} {
+    width:get-state-width($state);
+    height:get-state-height($state);
+    top: -1000px;
+    .b-widget_#{$state} & {
+      top: 0;
+      }
+    }
+  }
+

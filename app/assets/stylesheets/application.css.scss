@@ -1,0 +1,22 @@
+/*
+ * This file contains common style rules and linings. It shares fonts and
+ * styles across the project.
+ *
+ * It made to be linked separately, in purpose of using caching mechanisms.
+ *
+ */
+
+@import "application/fonts";
+
+body {
+  margin:0;
+  }
+
+.widget {
+  width:990px;
+  margin:30px auto;
+
+  iframe {
+    display:block;
+    }
+  }

@@ -1,0 +1,17 @@
+*sqlite3
+.DS_Store
+.bundle
+.idea
+.rbenv-version
+.ruby-version
+.rvmrc
+config/database.yml
+config/initializers/*_local.rb
+config/lam_auth.yml
+db/*.sqlite3
+log
+mkmf.log
+public/levis
+public/assets
+tmp
+

@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title Opel Mokka
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+
+    = stylesheet_link_tag 'application', 'widget'
+
+    = render "_/google_analytics"
+
+  body
+
+    .b-loader.b-loader_loading
+
+    .h-widget
+
+      .b-widget.b-widget_collapsed
+        .b-open-btn.g-button-open
+        .b-close-btn.g-button-close
+
+        .b-view.b-view_collapsed
+          p Collapsed view
+
+        /
+          .b-view.b-view_semiexpanded
+            p Semiexpanded view
+
+        .b-view.b-view_expanded
+          p Expanded view
+          p
+            a.main-link href="#" target="_blank" main link
+
+    = javascript_include_tag 'widget'
+
+    = render '_/sharing_includes'

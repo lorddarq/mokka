@@ -1,0 +1,80 @@
+@import "base";
+
+
+/* Sprites setup
+---------------------------------------- */
+
+$g-layout: smart;
+$g-spacing: 10px;
+$g-sprite-dimensions: true;
+@import "g/*.png";
+@include all-g-sprites;
+
+
+/* Widget and states setup
+---------------------------------------- */
+
+/* @import "widget_base"; */
+
+@include widget-states(
+  collapsed 990px 90px,
+  expanded 990px 250px
+);
+$default-state: collapsed;
+
+$background-color: #fff;
+
+@import "widget_base/styles";
+@import "widget_base/elements";
+
+
+
+/*
+ * HTML tags and global classes styles
+ */
+
+body {
+  font-family:$base-font-family;
+  text-rendering:optimizeLegibility;
+  -moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+  }
+
+.b-open-btn {
+  // @include g-sprite(button-open);
+  }
+.b-close-btn {
+  // @include g-sprite(button-close);
+  }
+
+.icon {
+  display: inline-block;
+  }
+
+
+/* Expanded view
+---------------------------------------- */
+
+.b-view_expanded {
+  }
+
+
+/* Semiexpanded view
+---------------------------------------- */
+
+.b-view_semiexpanded {
+  }
+
+
+/* Collapsed view
+---------------------------------------- */
+
+.b-view_collapsed {
+  }
+

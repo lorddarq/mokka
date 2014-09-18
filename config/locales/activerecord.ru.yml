@@ -1,0 +1,18 @@
+ru:
+  attributes:
+    title: Заголовок
+    permalink: Пермалинк
+    body: Содержание
+    image: Изображение
+    
+  activerecord:
+    # errors:
+    #   models:
+    #     ...:
+    #       attributes:
+    #         email:
+    #           invalid_email: имеет неправильный формат
+            
+    attributes:
+
+      

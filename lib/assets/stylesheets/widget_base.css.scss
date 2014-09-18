@@ -1,0 +1,138 @@
+@import "compass/css3";
+
+/* Fonts styles
+---------------------------------------- */
+
+$default-font-family: Helvetica, 'Liberation Sans', Arial, sans-serif !default;
+
+
+/* Color vars
+---------------------------------------- */
+
+$background-color: #fff !default;
+$text-color: #000 !default;
+$link-color: #069 !default;
+$hover-link-color: #096 !default;
+$active-link-color: $text-color !default;
+
+$border-color: #000 !default;
+$border-width: 1px !default;
+
+
+/* Text layout settings
+---------------------------------------- */
+
+$paragraph-margin: 0 0 1em !default;
+
+
+/* HTML styles
+---------------------------------------- */
+
+body {
+  margin:0;
+  font: 12pt/1.25em $default-font-family;
+  background:$background-color;
+  color:$text-color;
+  @if lightness($text-color) < 50% {
+    -webkit-font-smoothing: antialiased;
+    }
+  }
+
+
+p,
+ol,
+ul,
+dl,
+table {
+  margin:$paragraph-margin;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size:1em; line-height:1;
+  font-weight:normal;
+  margin:0;
+  }
+
+/* a, */
+/* a:hover, */
+/* a:active, */
+/* a.active, */
+/* a:visited { */
+  /* color:$link-color; */
+  /* } */
+/* a:focus { */
+  /* outline:none; */
+  /* } */
+/* a:hover { */
+  /* color:$hover-link-color; */
+  /* } */
+
+/* img { */
+  /* display:block; */
+  /* margin:0 auto; */
+  /* border:none; */
+  /* } */
+
+sup {
+  font-size:0.8em;
+  vertical-align:baseline;
+  position:relative;
+  top:-.22em;
+  }
+
+.g-line:before,
+.g-line:after {
+  content: "";
+  display: table;
+  }
+.g-line:after {
+  clear: both;
+  }
+
+
+/* Widgets common
+---------------------------------------- */
+
+$states: collapsed !default;
+$state-widths: 300px !default;
+$state-heights: 500px !default;
+$default-state: collapsed !default;
+
+@mixin widget-state($state, $width, $height) {
+  $states: append($states, $state);
+  $state-widths: append($state-widths, $width);
+  $state-heights: append($state-heights, $height);
+  .b-widget-state-included_#{$state} {
+    font-weight:bold;
+    }
+  }
+
+@mixin widget-states($states-data...) {
+  $default-state-data: nth($states-data, 1);
+  $states: nth($default-state-data, 1);
+  $state-widths: nth($default-state-data, 2);
+  $state-heights: nth($default-state-data, 3);
+    @for $i from 2 through length($states-data) {
+      @include widget-state(nth($states-data, $i)...);
+      }
+  }
+
+@function get-state-width($state: $default-state) {
+  @return nth($state-widths, index($states, $state) or 1);
+  }
+
+@function get-state-height($state: $default-state) {
+  @return nth($state-heights, index($states, $state) or 1);
+  }
+
+@mixin widget-font-face($name) {
+  @font-face {
+    font-family: "#{$name}";
+    src: font-url("#{$name}/#{$name}.eot");
+    src: font-url("#{$name}/#{$name}.eot?#iefix") format("embedded-opentype"),
+      font-url("#{$name}/#{$name}.woff") format("woff"),
+      font-url("#{$name}/#{$name}.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+    }
+  }

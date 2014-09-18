@@ -1,0 +1,12 @@
+ru:
+  meta:
+    _defaults:
+      og:title: '%{og:site_name}'
+      og:type: article
+      og:image: og_logo_lookatme.png
+      og:site_name: Название сайта
+      og:description: ''
+    
+    pages:
+      index: 
+        og:title: Индекс
