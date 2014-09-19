@@ -67,7 +67,39 @@
 
 .calendar {
   display: none;
-//  background: inline('inline/calendar_bg.png') 0 0 no-repeat;
+  background: inline('inline/calendar_bg.png') 0 0 no-repeat;
+
+  .date{
+
+    position: absolute;
+    width: 164px;
+    height: 164px;
+
+    background: inline('inline/date_bg.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('inline/date_bg_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .date_1 {
+    left: 118px;
+    top: 61px;
+  }
+
+  .date_2 {
+    left: 312px;
+    top: 61px;
+  }
+
+  .date_3 {
+    left: 510px;
+    top: 61px;
+  }
+
+  .date_4 {
+    left: 702px;
+    top: 61px;
+  }
 }
 
 .about {
@@ -101,6 +133,10 @@
     top: 45px;
     left: 941px;
     background: inline('inline/menu_icon.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('inline/menu_icon_hover.png') 0 0 no-repeat;
+    }
+
   }
 
   .menu {

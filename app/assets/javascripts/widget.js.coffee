@@ -51,6 +51,10 @@ $('.menu .menu-rules').click (e)->
   e.preventDefault()
   showState('.state.rules')
 
+#  main
+$('.start-btn').click (e)->
+  e.preventDefault()
+  showState('.state.calendar')
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals
