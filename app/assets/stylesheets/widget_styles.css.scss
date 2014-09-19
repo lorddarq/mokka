@@ -3,6 +3,10 @@
   width: 225px;
   height: 44px;
   background: inline('inline/start_btn.png') 0 0 no-repeat;
+
+  &:hover {
+    background: inline('inline/start_btn_hover.png') 0 0 no-repeat;
+  }
 }
 
 .main {
@@ -69,11 +73,23 @@
 .about {
   display: none;
   background: inline('inline/about_bg.png') 0 0 no-repeat;
+
+  .start-btn {
+    bottom: 0px;
+    left: 50%;
+    margin-left: -112px;
+  }
 }
 
 .rules {
   display: none;
   background: inline('inline/rules_bg.png') 0 0 no-repeat;
+
+  .start-btn {
+    bottom: 0px;
+    left: 50%;
+    margin-left: -112px;
+  }
 }
 
 .underlayer {
@@ -88,48 +104,105 @@
   }
 
   .menu {
-    display: none;
+
     background: inline('inline/menu_bg.png') 0 -4px no-repeat;
     width: 211px;
     height: 250px;
     position: absolute;
     top: 0px;
-    left: 779px;
+    left: 990px;
+    transition: left 0.3s linear;
+
+    &.show {
+      left: 779px;
+    }
 
     .list {
       ul {
-       padding: 0;
+        padding: 60px 0 0 32px;
         margin: 0;
       }
 
       li {
+
+        padding: 0 0 0 6px;
+
         a {
           font-family: OpelSansCondensedHeadline;
           color: #ffffff;
           font-size: 13px;
           font-weight: 400;
           line-height: 32px;
+          text-decoration: none;
+          width: 135px;
 
+          &:hover {
+            font-family: OpelSansCondensedHeadline;
+            color: #28210e;
+            text-decoration: none;
+            background: #F2F0EA;
+          }
         }
 
-        a:hover {
-          font-family: OpelSansCondensedHeadline;
-          color: #28210e;
-        }
+
       }
+
+
     }
 
     .share {
 
+      .vk {
+        position: absolute;
+        top: 40px;
+        left: 62px;
+
+        width: 24px;
+        height: 13px;
+        background: inline('inline/vk.png') 0 0 no-repeat;
+        &:hover {
+          background: inline('inline/vk_hover.png') 0 0 no-repeat;
+        }
+      }
+
+      .fb {
+        position: absolute;
+        top: 36px;
+        left: 38px;
+
+        width: 10px;
+        height: 20px;
+        background: inline('inline/fb.png') 0 0 no-repeat;
+        &:hover {
+          background: inline('inline/fb_hover.png') 0 0 no-repeat;
+        }
+      }
+
+      .insta {
+        position: absolute;
+        top: 36px;
+        left: 101px;
+
+        width: 20px;
+        height: 20px;
+        background: inline('inline/insta.png') 0 0 no-repeat;
+        &:hover {
+          background: inline('inline/insta_hover.png') 0 0 no-repeat;
+        }
+      }
     }
 
-    .close-btn {
+    .close-menu {
       position: absolute;
       width: 14px;
       height: 14px;
       top: 220px;
       left: 183px;
       background: inline('inline/menu_close.png') 0 0 no-repeat;
+
+      &:hover {
+        background: inline('inline/menu_close_hover.png') 0 0 no-repeat;
+      }
     }
   }
 }

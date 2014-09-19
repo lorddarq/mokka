@@ -30,20 +30,44 @@ html
             .test-nav.test-nav_1
           .state.map
           .state.calendar
-            .date_1
-            .date_2
-            .date_3
-            .date_4
-            .date_5
+            .date.date_1
+              .num
+              .mon
+            .date.date_2
+              .num
+              .mon
+            .date.date_3
+              .num
+              .mon
+            .date.date_4
+              .num
+              .mon
 
           .state.about
+            a.start-btn href="#"
+
           .state.rules
+            a.start-btn href="#"
+
           .underlayer
             a.menu-icon href="#"
             .menu
               .list
+                ul
+                  li
+                    a.menu-calendar href="#" Все маршруты
+                  li
+                    a.menu-about href="#" Об акции
+                  li
+                    a.menu-rules href="#" Условия участия
+                  li
+                    a href="#" Записаться на тест-драйв
               .share
-              a.close-btn
+                a.fb href="#"
+                a.vk href="#"
+                /a.insta href="#"
+
+              a.close-menu href="#"
 
     = javascript_include_tag 'widget'
 

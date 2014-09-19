@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Opel Sans Condensed Carline';
+  src: url('Opel Sans Condensed Carline.eot'); /* IE9 Compat Modes */
+  src: url('Opel Sans Condensed Carline.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Opel Sans Condensed Carline.woff') format('woff'), /* Modern Browsers */
+       url('Opel Sans Condensed Carline.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Opel Sans Condensed Carline.svg#ff9fa2e2a24e988bf3a921c4400dc040') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+

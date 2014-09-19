@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Opel Sans Condensed';
+  src: url('OpelSansCondensed-Bd.eot'); /* IE9 Compat Modes */
+  src: url('OpelSansCondensed-Bd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('OpelSansCondensed-Bd.woff') format('woff'), /* Modern Browsers */
+       url('OpelSansCondensed-Bd.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('OpelSansCondensed-Bd.svg#bec16024be4d48189fbb5d979dd8435d') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
