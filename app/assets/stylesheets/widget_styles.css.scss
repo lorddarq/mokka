@@ -1,0 +1,87 @@
+.main {
+   background: inline('inline/main_bg.png') 0 0 no-repeat;
+}
+
+.test {
+  display: none;
+
+  .test_1 {
+    background: inline('inline/test-bg_1.png') 0 0 no-repeat;
+  }
+  .test_2 {
+    background: inline('inline/test-bg_2.png') 0 0 no-repeat;
+  }
+
+  .test-nav {
+    position: absolute;
+
+    width: $widget-width;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+
+    .test-nav_1 {
+      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    }
+
+    .test-nav_2 {
+      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    }
+
+    .test-nav_3 {
+      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    }
+
+    .test-nav_4 {
+      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    }
+
+    .test-nav_5 {
+      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    }
+  }
+}
+
+.map {
+  display: none;
+  .map_1 {
+//    background: inline('inline/map_1_bg.png') 0 0 no-repeat;
+  }
+}
+
+.calendar {
+  display: none;
+//  background: inline('inline/calendar_bg.png') 0 0 no-repeat;
+}
+
+.about {
+  display: none;
+  background: inline('inline/about_bg.png') 0 0 no-repeat;
+}
+
+.rules {
+  display: none;
+  background: inline('inline/rules_bg.png') 0 0 no-repeat;
+}
+
+.underlayer {
+
+  .menu-icon {
+    width: 19px;
+    height: 16px;
+    position: absolute;
+    top: 45px;
+    left: 941px;
+    background: inline('inline/menu_icon.png') 0 0 no-repeat;
+  }
+
+  .menu  {
+    display: none;
+    background: inline('inline/menu_bg.png') 0 -4px no-repeat;
+    width: 211px;
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 779px;
+  }
+}

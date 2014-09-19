@@ -16,6 +16,13 @@ widget.hasStateActionButton '.b-close-btn', 'collapse'
 
 window.widget = widget
 
+$('.menu-icon').click (e)->
+  e.preventDefault()
+  $('.menu').show()
+
+$('.close-menu').click (e)->
+  e.preventDefault()
+  $('.menu').hide()
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals
