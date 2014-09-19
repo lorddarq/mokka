@@ -62,12 +62,13 @@ body {
 ---------------------------------------- */
 
 .b-view_expanded {
-  div {
+  .state {
     position: absolute;
     left: 0;
     top: 0;
     width: $widget-width;
     height: 250px;
+
   }
 }
 
