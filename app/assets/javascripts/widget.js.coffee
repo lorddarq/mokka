@@ -18,6 +18,7 @@ window.widget = widget
 
 test_id = 1
 question = 1
+pins = []
 
 closeMenu = ->
   $('.menu').removeClass('show')
@@ -37,7 +38,6 @@ showTestQuestion = ()->
   #показываем вопрос
   $('.question-' + test_id).text($('.question-' + test_id).attr('data-text-' + question))
 
-
   #обновляем ответы
   $('.answer').hide()
   $('.answer-' + question).show()
@@ -52,7 +52,10 @@ showTest = ()->
   $('.questions div').hide()
   $('.answers .a-test').hide()
   $('.a-test .answer').hide()
+  $('.map_bg').hide()
 
+
+  pins = []
   question = 1
   showTestQuestion()
 
@@ -64,6 +67,13 @@ showTest = ()->
 
 setTestAnswer = (index)->
   #check answer by test_id and question
+  console.log(test_id, question)
+
+
+  answer = $('.a-test-'+test_id+' .answer-'+question).attr('data-check')
+
+  if answer.attr('data-check') == index
+    pin.push({ long: answer.attr('long'), lat: answer.attr('lat') })
 
   question++;
   if question <= 5
