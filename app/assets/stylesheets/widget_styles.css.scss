@@ -9,6 +9,73 @@
   }
 }
 
+.calendar-btn {
+  position: absolute;
+  width: 250px;
+  height: 44px;
+  background: inline('inline/calendar_btn.png') 0 0 no-repeat;
+
+  &:hover {
+    background: inline('inline/calendar_btn_hover.png') 0 0 no-repeat;
+  }
+}
+
+.again-btn {
+  position: absolute;
+  width: 250px;
+  height: 44px;
+  background: inline('inline/again_btn.png') 0 0 no-repeat;
+
+  &:hover {
+    background: inline('inline/again_btn_hover.png') 0 0 no-repeat;
+  }
+}
+
+.social-links {
+  position: absolute;
+  top: 187px;
+  left: 37px;
+
+  .vk {
+    position: absolute;
+    top: 0px;
+    left: 46px;
+
+    width: 40px;
+    height: 36px;
+    background: inline('inline/link_vk.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('inline/link_vk_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .fb {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 36px;
+    height: 36px;
+    background: inline('inline/link_fb.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('inline/link_fb_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .insta {
+    position: absolute;
+    top: 0;
+    left: 94px;
+
+    width: 36px;
+    height: 36px;
+    background: inline('inline/link_insta.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('inline/link_insta_hover.png') 0 0 no-repeat;
+    }
+  }
+}
+
 .main {
    background: inline('inline/main_bg.png') 0 0 no-repeat;
 
@@ -22,10 +89,19 @@
   display: none;
 
   .test_1 {
-    background: inline('inline/test-bg_1.png') 0 0 no-repeat;
+    background: inline('inline/test/bg_1.jpg') 0 0 no-repeat;
   }
   .test_2 {
-    background: inline('inline/test-bg_2.png') 0 0 no-repeat;
+    background: inline('inline/test/bg_2.jpg') 0 0 no-repeat;
+  }
+  .test_3 {
+    background: inline('inline/test/bg_3.jpg') 0 0 no-repeat;
+  }
+  .test_4 {
+    background: inline('inline/test/bg_4.jpg') 0 0 no-repeat;
+  }
+  .test_5 {
+    background: inline('inline/test/bg_5.jpg') 0 0 no-repeat;
   }
 
   .test-nav {
@@ -60,9 +136,56 @@
 
 .map {
   display: none;
-  .map_1 {
-//    background: inline('inline/map_1_bg.png') 0 0 no-repeat;
+
+  .map_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $widget-width;
+    height: 250px;
   }
+
+  .map-1 {
+    background: inline('inline/maps/map_1.png') 0 0 no-repeat;
+  }
+
+  .map-2 {
+    background: inline('inline/maps/map_2.png') 0 0 no-repeat;
+  }
+
+  .map-3 {
+    background: inline('inline/maps/map_3.png') 0 0 no-repeat;
+  }
+
+  .map-4 {
+    background: inline('inline/maps/map_4.png') 0 0 no-repeat;
+  }
+
+  .map-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $widget-width;
+    height: 57px;
+    background: inline('inline/map_title_bg.png') 0 0 no-repeat;
+    text-align: center;
+    line-height: 57px;
+    font-size: 28px;
+    font-family: "OpelSansCondensedCarline";
+    color: #28210e;
+  }
+
+  .calendar-btn {
+    bottom: 0;
+    left: 239px;
+  }
+
+  .again-btn {
+    bottom: 0;
+    left: 502px;
+  }
+
+
 }
 
 .calendar {
@@ -74,10 +197,48 @@
     position: absolute;
     width: 164px;
     height: 164px;
+    text-decoration: none;
+
+    .num {
+
+      font-family: "OpelSansCondensed";
+      color:  #28210e;
+      font-size: 50px; /* Approximation due to font substitution */
+      font-weight: 700;
+      line-height: 36px; /* Approximation due to font substitution */
+      width: 164px;
+      height: 35px;
+      text-decoration: none;
+      text-align: center;
+      position: absolute;
+      top: 37px;
+    }
+
+    .mon {
+      font-family: "OpelSansCondensed";
+      color: #28210e;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 36px;
+      width: 164px;;
+      height: 26px;
+      text-decoration: none;
+      text-align: center;
+      position: absolute;
+      top: 70px;
+    }
 
     background: inline('inline/date_bg.png') 0 0 no-repeat;
     &:hover {
       background: inline('inline/date_bg_hover.png') 0 0 no-repeat;
+
+      .num {
+        color: #FFFFFF;
+      }
+
+      .mon {
+        color: #FFFFFF;
+      }
     }
   }
 
@@ -146,7 +307,7 @@
     height: 250px;
     position: absolute;
     top: 0px;
-    left: 990px;
+    left: $widget-width;
     transition: left 0.3s linear;
 
     &.show {
@@ -154,33 +315,53 @@
     }
 
     .list {
-      ul {
-        padding: 60px 0 0 32px;
-        margin: 0;
+      position: absolute;
+      left: 32px;
+      top: 77px;
+
+      .l-item {
+        display: block;
+        margin-bottom: 4px;
       }
 
-      li {
+      .menu-calendar {
+        width: 134px;
+        height: 21px;
+        background: inline('inline/menu_text.png') 0 -25px no-repeat;
 
-        padding: 0 0 0 6px;
-
-        a {
-          font-family: OpelSansCondensedHeadline;
-          color: #ffffff;
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 32px;
-          text-decoration: none;
-          width: 135px;
-
-          &:hover {
-            font-family: OpelSansCondensedHeadline;
-            color: #28210e;
-            text-decoration: none;
-            background: #F2F0EA;
-          }
+        &:hover {
+          background: inline('inline/menu_text_hover.png') 0 -25px no-repeat;
         }
+      }
 
+      .menu-about {
+        width: 134px;
+        height: 21px;
+        background: inline('inline/menu_text.png') 0 -50px no-repeat;
 
+        &:hover {
+          background: inline('inline/menu_text_hover.png') 0 -50px no-repeat;
+        }
+      }
+
+      .menu-rules {
+        width: 134px;
+        height: 21px;
+        background: inline('inline/menu_text.png') 0 -75px no-repeat;
+
+        &:hover {
+          background: inline('inline/menu_text_hover.png') 0 -75px no-repeat;
+        }
+      }
+
+      .menu-drive {
+        width: 134px;
+        height: 40px;
+        background: inline('inline/menu_text.png') 0 -100px no-repeat;
+
+        &:hover {
+          background: inline('inline/menu_text_hover.png') 0 -100px no-repeat;
+        }
       }
 
 

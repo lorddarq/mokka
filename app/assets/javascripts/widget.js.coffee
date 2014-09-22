@@ -51,10 +51,27 @@ $('.menu .menu-rules').click (e)->
   e.preventDefault()
   showState('.state.rules')
 
+# share
+
+$('.share .fb').click (e)->
+  e.preventDefault()
+
+$('.share .vk').click (e)->
+  e.preventDefault()
+
 #  main
 $('.start-btn').click (e)->
   e.preventDefault()
   showState('.state.calendar')
+
+# calendar
+
+$('.calendar .date').click (e)->
+  id = $(e.target).attr('data-test')
+  $('.question').text($('.question').attr('data-text-'+id))
+  $('.answers div').hide()
+  $('.answers .a-test-' + id).show()
+  $('.calendar').show()
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals
