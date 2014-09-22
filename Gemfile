@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 source 'https://rails-assets.org'
 
-ruby '2.0.0'
+ruby '2.1.2'
 
 gem 'slim-rails'
 gem 'coffee-rails', '~> 4.0.0'
