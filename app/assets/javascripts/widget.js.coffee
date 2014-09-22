@@ -75,6 +75,13 @@ setTestAnswer = (index)->
     $('.map-' + test_id).show()
     showState('.state.map')
 
+$('.map .again-btn').click (e)->
+  e.preventDefault()
+  showTest()
+
+$('.map .calendar-btn').click (e)->
+  e.preventDefault()
+  showState('.state.calendar')
 
 $('.menu-icon').click (e)->
   e.preventDefault()
