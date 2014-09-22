@@ -16,6 +16,9 @@ widget.hasStateActionButton '.b-close-btn', 'collapse'
 
 window.widget = widget
 
+test_id = 1
+question = 1
+
 closeMenu = ->
   $('.menu').removeClass('show')
 
@@ -23,6 +26,54 @@ showState = (sel)->
   closeMenu()
   $('.state').hide()
   $(sel).show()
+
+
+showTestQuestion = ()->
+
+  #bg
+  $('.test-bg div').hide()
+  $('.test-bg .test-bg-' + question).show()
+
+  #показываем вопрос
+  $('.question-' + test_id).text($('.question-' + test_id).attr('data-text-' + question))
+
+
+  #обновляем ответы
+  $('.answer').hide()
+  $('.answer-' + question).show()
+
+  #обновляем прогресс бар
+  $('.test-nav').hide()
+  $('.test-nav-' + question).show()
+
+
+showTest = ()->
+  #hide old values
+  $('.questions div').hide()
+  $('.answers .a-test').hide()
+  $('.a-test .answer').hide()
+
+  question = 1
+  showTestQuestion()
+
+  $('.question-' + test_id).show()
+  $('.a-test-' + test_id).show()
+
+  showState('.state.test')
+
+
+setTestAnswer = (index)->
+  #check answer by test_id and question
+
+  question++;
+  if question <= 5
+    #show next question
+    showTestQuestion()
+  else
+    #show map
+    $('.map_bg').hide()
+    $('.map-' + test_id).show()
+    showState('.state.map')
 
 
 $('.menu-icon').click (e)->
@@ -67,11 +118,15 @@ $('.start-btn').click (e)->
 # calendar
 
 $('.calendar .date').click (e)->
-  id = $(e.target).attr('data-test')
-  $('.question').text($('.question').attr('data-text-'+id))
-  $('.answers div').hide()
-  $('.answers .a-test-' + id).show()
-  $('.calendar').show()
+  console.log(e.target)
+  test_id = $(e.target).attr('data-test')
+  showTest()
+
+# test answer click
+
+$('a.option').click (e)->
+  setTestAnswer($(e.target).attr('data-index'))
+
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals

@@ -1,3 +1,11 @@
+.bg {
+  position: absolute;
+  width: $widget-width;
+  height: 250px;
+  top: 0;
+  left: 0;
+}
+
 .start-btn {
   position: absolute;
   width: 225px;
@@ -87,49 +95,113 @@
 
 .test {
   display: none;
+  .test-bg {
 
-  .test_1 {
-    background: inline('inline/test/bg_1.jpg') 0 0 no-repeat;
+    .test-bg-1 {
+      background: inline('inline/test/bg_1.jpg') 0 0 no-repeat;
+    }
+    .test-bg-2 {
+      background: inline('inline/test/bg_2.jpg') 0 0 no-repeat;
+    }
+    .test-bg-3 {
+      background: inline('inline/test/bg_3.jpg') 0 0 no-repeat;
+    }
+    .test-bg-4 {
+      background: inline('inline/test/bg_4.jpg') 0 0 no-repeat;
+    }
+    .test-bg-5 {
+      background: inline('inline/test/bg_5.jpg') 0 0 no-repeat;
+    }
   }
-  .test_2 {
-    background: inline('inline/test/bg_2.jpg') 0 0 no-repeat;
+
+  .questions {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+
+    .question {
+      display: table-cell;
+      vertical-align: middle;
+      width: 880px;
+      padding: 10px 55px;
+      font-size: 32px;
+      font-family: Opel-Sans-Condensed-Headline;
+      color: #28210e;
+      text-align: center;
+      line-height: 32px;
+    }
   }
-  .test_3 {
-    background: inline('inline/test/bg_3.jpg') 0 0 no-repeat;
-  }
-  .test_4 {
-    background: inline('inline/test/bg_4.jpg') 0 0 no-repeat;
-  }
-  .test_5 {
-    background: inline('inline/test/bg_5.jpg') 0 0 no-repeat;
+
+  $answer-height: 85px;
+  $answer-radius: 5px;
+
+  .answers {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: $widget-width;
+    height: $answer-height;
+
+    .a-test {
+      top: 0;
+      left: 0;
+      width: 850px;
+      margin: 0 auto;
+      height: $answer-height;
+
+      .answer {
+        height: $answer-height;
+        display: table;
+      }
+    }
+
+    .option {
+      display: table-cell;
+      width: 170px;
+      text-align: center;
+      height: $answer-height;
+      text-decoration: none;
+      vertical-align: middle;
+      font-size: 18px;
+      font-family: Opel-Sans-Condensed-Headline;
+      color:  #28210e;
+
+      &:hover {
+        background: #ffca1a;
+        border-radius: $answer-radius;
+      }
+    }
+
   }
 
   .test-nav {
     position: absolute;
 
     width: $widget-width;
-    height: 50px;
+    height: 31px;
     bottom: 0;
     left: 0;
 
-    .test-nav_1 {
+    &.test-nav-1 {
       background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
     }
 
-    .test-nav_2 {
-      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    &.test-nav-2 {
+      background: inline('inline/test/nav-bg_2.png') 0 0 no-repeat;
     }
 
-    .test-nav_3 {
-      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    &.test-nav-3 {
+      background: inline('inline/test/nav-bg_3.png') 0 0 no-repeat;
     }
 
-    .test-nav_4 {
-      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    &.test-nav-4 {
+      background: inline('inline/test/nav-bg_4.png') 0 0 no-repeat;
     }
 
-    .test-nav_5 {
-      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+    &.test-nav-5 {
+      background: inline('inline/test/nav-bg_5.png') 0 0 no-repeat;
     }
   }
 }
@@ -146,19 +218,19 @@
   }
 
   .map-1 {
-    background: inline('inline/maps/map_1.png') 0 0 no-repeat;
+    background: inline('inline/maps/map_1.jpg') 0 0 no-repeat;
   }
 
   .map-2 {
-    background: inline('inline/maps/map_2.png') 0 0 no-repeat;
+    background: inline('inline/maps/map_2.jpg') 0 0 no-repeat;
   }
 
   .map-3 {
-    background: inline('inline/maps/map_3.png') 0 0 no-repeat;
+    background: inline('inline/maps/map_3.jpg') 0 0 no-repeat;
   }
 
   .map-4 {
-    background: inline('inline/maps/map_4.png') 0 0 no-repeat;
+    background: inline('inline/maps/map_4.jpg') 0 0 no-repeat;
   }
 
   .map-title {
@@ -171,7 +243,7 @@
     text-align: center;
     line-height: 57px;
     font-size: 28px;
-    font-family: "OpelSansCondensedCarline";
+    font-family: Opel-Sans-Condensed-Carline;
     color: #28210e;
   }
 
@@ -201,6 +273,7 @@
 
     .num {
 
+      pointer-events: none;
       font-family: "OpelSansCondensed";
       color:  #28210e;
       font-size: 50px; /* Approximation due to font substitution */
@@ -215,6 +288,7 @@
     }
 
     .mon {
+      pointer-events: none;
       font-family: "OpelSansCondensed";
       color: #28210e;
       font-size: 26px;
