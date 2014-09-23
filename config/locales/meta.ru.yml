@@ -3,9 +3,9 @@ ru:
     _defaults:
       og:title: '%{og:site_name}'
       og:type: article
-      og:image: og_logo_lookatme.png
-      og:site_name: Название сайта
-      og:description: ''
+      og:image: 500x500.png
+      og:site_name: Чего ты не знаешь о Москве
+      og:description: 'Пройди тест о Москве на «эксперте» и выиграй годовой абонемент на парковку в центре.'
     
     pages:
       index: 
