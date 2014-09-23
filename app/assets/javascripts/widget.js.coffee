@@ -1,5 +1,6 @@
 #= require 'widget_base'
 #= require 'map'
+#= require 'ltst/events'
 
 widget = new Widget "Opel Mokka"
 
@@ -127,12 +128,22 @@ $('.menu .menu-rules').click (e)->
   showState('.state.rules')
 
 # share
-
+shareUrl = 'http://specials.the-village.ru/mokka'
 $('.share .fb').click (e)->
   e.preventDefault()
+  MokkoEvents.fb_share.dispatch()
+  openWindow('https://www.facebook.com/sharer.php?u=' + encodeURIComponent(shareUrl) + '&display=popup', 655, 370, true)
 
 $('.share .vk').click (e)->
   e.preventDefault()
+  MokkoEvents.vk_share.dispatch()
+  openWindow('https://vk.com/share.php?url=' + shareUrl, 655, 370, true)
+
+openWindow = (url, width, height, centered) ->
+  left = if centered then (screen.width/2)-(width/2) else 0
+  top = if centered then (screen.height/2)-(height/2) else 0
+  window.open(url, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no,
+    scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', left=' + left + ', top=' + top)
 
 #  main
 $('.start-btn').click (e)->
@@ -163,4 +174,40 @@ eventsTracker.mapEventsToSignals
   'event_2':
     signal: widget.collapsed
     action: 'widget collapsed'
+  'event_3':
+    signal: MokkoEvents.start_btn_click
+    action: 'start btn click'
+  'event_4':
+    signal: MokkoEvents.menu_btn_click
+    action: 'menu btn click'
+  'event_5':
+    signal: MokkoEvents.close_menu_btn_click
+    action: 'close menu btn click'
+  'event_6':
+    signal: MokkoEvents.menu_calendar_click
+    action: 'menu calendar click'
+  'event_7':
+    signal: MokkoEvents.menu_about_click
+    action: 'menu about click'
+  'event_8':
+    signal: MokkoEvents.menu_rules_click
+    action: 'menu rules click'
+  'event_9':
+    signal: MokkoEvents.calendar_date_click
+    action: 'calendar date click'
+  'event_10':
+    signal: MokkoEvents.answer_click
+    action: 'answer click'
+  'event_11':
+    signal: MokkoEvents.map_again_btn_click
+    action: 'map again btn click'
+  'event_12':
+    signal: MokkoEvents.map_calendar_btn_click
+    action: 'map calendar btn click'
+  'event_13':
+    signal: MokkoEvents.fb_share
+    action: 'fb share'
+  'event_14':
+    signal: MokkoEvents.vk_share
+    action: 'vk share'
 
