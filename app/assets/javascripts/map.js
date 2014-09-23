@@ -11,9 +11,9 @@ function renderMarkers(map, pins)
 
   var image = {
     url: $('#map').attr('data-pin-url'),
-    size: new google.maps.Size(25, 35),
+    size: new google.maps.Size(28, 42),
     origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(25, 35)
+    anchor: new google.maps.Point(28, 42)
   };
 
   var pinMarker;

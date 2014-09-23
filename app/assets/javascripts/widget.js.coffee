@@ -93,6 +93,10 @@ setTestAnswer = (index)->
     showState('.state.map')
     renderMarkers(map, pins)
 
+autoStart = ->
+  test_id = $('.calendar').attr('data-auto')
+  showTest()
+
 $('.map .again-btn').click (e)->
   e.preventDefault()
   showTest()
@@ -109,9 +113,9 @@ $('.close-menu').click (e)->
   e.preventDefault()
   closeMenu()
 
-#$('.menu .menu-start').click (e)->
-#  e.preventDefault()
-#  closeMenu()
+$('.menu .menu-start').click (e)->
+  e.preventDefault()
+  autoStart()
 
 $('.menu .menu-calendar').click (e)->
   e.preventDefault()
@@ -145,21 +149,24 @@ openWindow = (url, width, height, centered) ->
   window.open(url, '', 'toolbar=no, location=no, directories=no, status=no, menubar=no,
     scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', left=' + left + ', top=' + top)
 
+
 #  main
 $('.start-btn').click (e)->
   e.preventDefault()
-  showState('.state.calendar')
+  autoStart()
 
 # calendar
 
 $('.calendar .date').click (e)->
-  console.log(e.target)
+  e.preventDefault()
+
   test_id = $(e.target).attr('data-test')
   showTest()
 
 # test answer click
 
 $('a.option').click (e)->
+  e.preventDefault()
   setTestAnswer($(e.target).attr('data-index'))
 
 if !map
