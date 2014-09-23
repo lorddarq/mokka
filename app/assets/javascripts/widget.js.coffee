@@ -1,5 +1,5 @@
 #= require 'widget_base'
-
+#= require 'map'
 
 widget = new Widget "Opel Mokka"
 
@@ -19,6 +19,13 @@ window.widget = widget
 test_id = 1
 question = 1
 pins = []
+
+map_title = ['правильных ответов',
+             'правильный ответ',
+             'правильных ответа',
+             'правильных ответа',
+             'правильных ответа',
+             'правильных ответов']
 
 closeMenu = ->
   $('.menu').removeClass('show')
@@ -52,8 +59,6 @@ showTest = ()->
   $('.questions div').hide()
   $('.answers .a-test').hide()
   $('.a-test .answer').hide()
-  $('.map_bg').hide()
-
 
   pins = []
   question = 1
@@ -70,10 +75,11 @@ setTestAnswer = (index)->
   console.log(test_id, question)
 
 
-  answer = $('.a-test-'+test_id+' .answer-'+question).attr('data-check')
+  answer = $('.a-test-'+test_id+' .answer-'+question)
 
   if answer.attr('data-check') == index
-    pin.push({ long: answer.attr('long'), lat: answer.attr('lat') })
+    console.log(answer.attr('data-check'),index, answer.attr('data-check') == index)
+    pins.push({ lng: answer.attr('data-lng'), lat: answer.attr('data-lat') })
 
   question++;
   if question <= 5
@@ -81,9 +87,10 @@ setTestAnswer = (index)->
     showTestQuestion()
   else
     #show map
-    $('.map_bg').hide()
-    $('.map-' + test_id).show()
+    console.log(pins.length, map_title[pins.length])
+    $('.map-title').text('У тебя '+ pins.length + ' ' + map_title[pins.length])
     showState('.state.map')
+    renderMarkers(map, pins)
 
 $('.map .again-btn').click (e)->
   e.preventDefault()
@@ -143,6 +150,9 @@ $('.calendar .date').click (e)->
 
 $('a.option').click (e)->
   setTestAnswer($(e.target).attr('data-index'))
+
+if !map
+  map = showMap([]);
 
 
 eventsTracker = new EventsTracker widget
