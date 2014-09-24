@@ -8,15 +8,32 @@
 @import "base";
 @import "application/fonts";
 
+html {
+  height: 100%;
+}
+
 body {
   margin:0;
+  height: 100%;
   }
 
 .widget {
   width:990px;
-  margin:30px auto;
+  margin:0px auto;
 
   iframe {
     display:block;
-    }
   }
+}
+
+.duplicate {
+  width: 100%;
+  height: 100%;
+  background: inline('2/bg.jpg') center center no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+
+
+
+

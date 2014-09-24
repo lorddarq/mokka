@@ -1,0 +1,4 @@
+# return_url можно не указывать, если это дефолтный http://:app-domain/xd_receiver.html
+app_id: false
+secret: false
+site: village
