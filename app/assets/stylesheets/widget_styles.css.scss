@@ -15,6 +15,14 @@
   &:hover {
     background: inline('inline/start_btn_hover.png') 0 0 no-repeat;
   }
+
+  &.start2 {
+    background: inline('inline/main_start_btn.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('inline/main_start_btn_hover.png') 0 0 no-repeat;
+    }
+  }
 }
 
 .calendar-btn {
@@ -36,6 +44,20 @@
 
   &:hover {
     background: inline('inline/again_btn_hover.png') 0 0 no-repeat;
+  }
+}
+
+.more-btn {
+  position: absolute;
+  width: 96px;
+  height: 12px;
+  bottom: 5px;
+  left: 50%;
+  margin-left: -48px;
+  background: inline('inline/more_btn.png') 0 0 no-repeat;
+
+  &:hover {
+    background: inline('inline/more_btn_hover.png') 0 0 no-repeat;
   }
 }
 
@@ -175,7 +197,6 @@
         border-radius: $answer-radius;
       }
     }
-
   }
 
   .test-nav {
@@ -213,8 +234,8 @@
 
   #map {
     width: 100%;
-    height: 192px;
-    margin-top: 58px;
+    height: 182px;
+    margin-top: 68px;
   }
 
   .map-title {
@@ -222,13 +243,19 @@
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 57px;
+    height: 68px;
     background: inline('inline/map_title_bg.png') 0 0 no-repeat;
-    text-align: center;
-    line-height: 57px;
-    font-size: 28px;
-    font-family: Opel-Sans-Condensed-Carline;
-    color: #28210e;
+
+    .title {
+      position: absolute;
+      text-align: center;
+      font-family: Opel-Sans-Condensed-Carline;
+      color: #28210e;
+      font-size: 28px;
+      width: $widget-width;
+      top: 15px;
+    }
+
   }
 
   .calendar-btn {
@@ -239,6 +266,24 @@
   .again-btn {
     bottom: 0;
     left: 502px;
+  }
+
+  .more {
+    background: inline('inline/more_bg.png') 0 0 no-repeat;
+
+    .title {
+      position: absolute;
+      text-align: center;
+      font-family: Opel-Sans-Condensed-Carline;
+      color: #28210e;
+      font-size: 28px;
+      width: $widget-width;
+      top: 15px;
+    }
+
+    .more-btn {
+      display: none;
+    }
   }
 }
 

@@ -23,16 +23,20 @@ html
         .b-close-btn.g-button-close
 
         .b-view.b-view_collapsed
-          p Collapsed view
 
         .b-view.b-view_expanded
           .state.map style="display:block;"
             #map data-pin-url="#{image_url('inline/pin.png')}"
             .map-title
+              .title
+              a.more-btn href="#"
             a.calendar-btn href="#"
             a.again-btn href="#"
+            .more.bg
+              .title
+              a.more-btn href="#"
           .state.main
-            a.start-btn href="#"
+            a.start-btn.start2 href="#"
           .state.test
 
             .bg.test-bg

@@ -89,6 +89,7 @@ body {
 ---------------------------------------- */
 
 .b-view_collapsed {
-  }
+  background: inline('inline/collapsed_bg.png') 0 0 no-repeat;
+}
 
 @import "widget_styles";

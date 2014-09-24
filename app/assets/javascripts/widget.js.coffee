@@ -88,8 +88,10 @@ setTestAnswer = (index)->
     showTestQuestion()
   else
     #show map
-    console.log(pins.length, map_title[pins.length])
-    $('.map-title').text('У тебя '+ pins.length + ' ' + map_title[pins.length])
+    $('.map .more').hide()
+    title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
+    $('.map-title .title').text(title)
+    $('.more .title').text(title)
     showState('.state.map')
     renderMarkers(map, pins)
 
@@ -104,6 +106,17 @@ $('.map .again-btn').click (e)->
 $('.map .calendar-btn').click (e)->
   e.preventDefault()
   showState('.state.calendar')
+
+$('.map-title .more-btn').click (e)->
+  e.preventDefault()
+  $('.map .more').slideDown(500, ->
+    $('.map .more .more-btn').show()
+  )
+
+$('.map .more .more-btn').click (e)->
+  e.preventDefault()
+  $('.map .more .more-btn').hide()
+  $('.map .more').slideUp(500)
 
 $('.menu-icon').click (e)->
   e.preventDefault()
@@ -120,7 +133,6 @@ $('.menu .menu-start').click (e)->
 $('.menu .menu-calendar').click (e)->
   e.preventDefault()
   showState('.state.calendar')
-
 
 $('.menu .menu-about').click (e)->
   e.preventDefault()
@@ -154,6 +166,10 @@ openWindow = (url, width, height, centered) ->
 $('.start-btn').click (e)->
   e.preventDefault()
   autoStart()
+
+$('.map-title .more-btn').click (e)->
+  e.preventDefault()
+  $('.map')
 
 # calendar
 
