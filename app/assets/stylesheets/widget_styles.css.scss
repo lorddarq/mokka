@@ -60,6 +60,14 @@
   &:hover {
     background: inline('inline/more_btn_hover.png') 0 0 no-repeat;
   }
+
+  &.close {
+    background: inline('inline/more_close_btn.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('inline/more_close_btn_hover.png') 0 0 no-repeat;
+    }
+  }
 }
 
 .social-links {
