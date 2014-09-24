@@ -20,20 +20,83 @@ body {
 .widget {
   width:990px;
   margin:0px auto;
-
+  border: 18px solid #ecede5;
   iframe {
     display:block;
   }
+
+  margin-bottom: 48px;
 }
 
 .duplicate {
   width: 100%;
-  height: 100%;
   background: inline('2/bg.jpg') center center no-repeat;
   background-size: cover;
   padding-top: 30px;
 }
 
+.rules {
+  position: relative;
+  margin: 0 auto;
+  width: 581px;
+  height: 371px;
+  background: inline('2/rules.png') center center no-repeat;
+  margin-bottom: 50px;
+}
+
+.car {
+  position: relative;
+  margin: 0 auto;
+  width: 450px;
+  height: 404px;
+  background: inline('2/car.png') center center no-repeat;
+}
+
+.social-links {
+  position:relative;
+  width: 156px;
+  margin: 0 auto;
+  height: 200px;
+
+  .vk {
+    position: absolute;
+    top: 100px;
+    left: 56px;
+
+    width: 44px;
+    height: 40px;
+    background: inline('2/vk.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('2/vk_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .fb {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+
+    width: 44px;
+    height: 40px;
+    background: inline('2/fb.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('2/fb_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .insta {
+    position: absolute;
+    top: 100px;
+    left: 112px;
+
+    width: 44px;
+    height: 40px;
+    background: inline('2/insta.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('2/insta_hover.png') 0 0 no-repeat;
+    }
+  }
+}
 
 
 
