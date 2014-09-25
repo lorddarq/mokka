@@ -1,0 +1,242 @@
+doctype html
+html
+  head
+    meta charset="UTF-8"
+    title Чего ты не знаешь о Москве
+
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta name='viewport' content='width=320, user-scalable=no'
+
+    = stylesheet_link_tag 'application', 'widget', 'phone'
+
+    = javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDYeTqtg8piLhZ8pwQhQYmIzvWDC1sZ5T0&sensor=true'
+
+    = render "_/google_analytics"
+
+  body
+
+    .b-loader.b-loader_loading
+
+    .h-widget
+
+      .b-widget.b-widget_collapsed
+        .b-open-btn.g-button-open
+        .b-close-btn.g-button-close
+
+        .b-view.b-view_collapsed
+          a.expand-btn
+          a.p-logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+        .b-view.b-view_expanded
+          .state.map style="display:block;"
+            #map data-pin-url="#{image_url('inline/pin.png')}"
+            .map-title
+              .title
+              a.more-btn href="#"
+            a.calendar-btn href="#"
+            a.again-btn href="#"
+            .more.bg
+              .title
+              a.more-btn.close href="#"
+            a.p-logo.logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+          .state.main
+            a.start-btn.start2 href="#"
+            a.p-logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+            a.orange target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+          .state.test
+
+            .bg.test-bg
+              .bg.test-bg-1
+              .bg.test-bg-2
+              .bg.test-bg-3
+              .bg.test-bg-4
+              .bg.test-bg-5
+
+            .questions
+              .question.question-1 data-text-1="Какой современный район Москвы до революции назывался Немецкой слободой?" data-text-2="На какой улице в Москве родился писатель и драматург Островский?" data-text-3="Какой из этих бульваров является частью Садового кольца?" data-text-4="Какое предприятие с 1931 по 1956 года называлось Заводом имени Сталина?" data-text-5="Где в Москве находится единственный дворцовый комплекс в стиле псевдоготики?"
+              .question.question-2 data-text-1="Где в Москве храм, мечеть и синагога стоят ближе всего друг к другу?" data-text-2="Где находится один из старейших ресторанов, открытый купцом Тарарыкиным?" data-text-3="На какой улице имени писателя XIX века находится его музей-усадьба, а рядом стоит и памятник?" data-text-4="Какая из этих станций метро названа в честь героя Советского союза?" data-text-5="В каком из парков был заложен первый проект храма Христа Спасителя?"
+              .question.question-3 data-text-1="С крыши какой гостиницы можно увидеть 5 из 7 известных сталинских высоток?" data-text-2="Где стояли арки для императоров, въезжавших из Петербурга в Москву?" data-text-3="На какой из площадей внутри современного бульварного кольца был рынок?" data-text-4="Где в Москве находится центральный офис компании «Лукойл»?" data-text-5="Какой район в XIX веке сравнивали с Лондонским Сити?"
+              .question.question-4 data-text-1="Какой бульвар в XIX веке был известен своими питейными заведениями?" data-text-2="Какое место Москвы раньше называлось Поганые болота?" data-text-3="Какая московская улица с VII века является основной дорогой на Ярославль?" data-text-4="Какое из этих мест было любимым для гуляний москвичей во времена Петра I?" data-text-5="Где находится фонтан, на котором изображены подсолнухи, конопля и колосья?"
+
+            .answers
+              .a-test.a-test-1
+                .answer.answer-1 data-check="3" data-lat="55.772481" data-lng="37.679163"
+                  a.option href="#" data-index="1" Таганка
+                  a.option href="#" data-index="2" Шаболовская
+                  a.option href="#" data-index="3" Бауманская
+                  a.option href="#" data-index="4" Парк культуры
+                  a.option href="#" data-index="5" Проспект мира
+                .answer.answer-2 data-check="4" data-lat="55.740729" data-lng="37.625588"
+                  a.option href="#" data-index="1" Мясницкая
+                  a.option href="#" data-index="2" Островского
+                  a.option href="#" data-index="3" Серафимовича
+                  a.option href="#" data-index="4" Малая Ордынка
+                  a.option href="#" data-index="5" Большая Никитская
+                .answer.answer-3 data-check="5" data-lat="55.735204" data-lng="37.593074"
+                  a.option href="#" data-index="1" Гоголевский
+                  a.option href="#" data-index="2" Осенний
+                  a.option href="#" data-index="3" Чистопрудный
+                  a.option href="#" data-index="4" Никитский
+                  a.option href="#" data-index="5" Зубовский
+                .answer.answer-4 data-check="1" data-lat="55.713886" data-lng="37.657278"
+                  a.option href="#" data-index="1" ЗИЛ
+                  a.option href="#" data-index="2" РотФронт
+                  a.option href="#" data-index="3" Стрела
+                  a.option href="#" data-index="4" Рассвет
+                  a.option href="#" data-index="5" Динамо
+                .answer.answer-5 data-check="3" data-lat="55.613195" data-lng="37.694966"
+                  a.option href="#" data-index="1" Архангельское
+                  a.option href="#" data-index="2" Коломенское
+                  a.option href="#" data-index="3" Царицыно
+                  a.option href="#" data-index="4" Измайлово
+                  a.option href="#" data-index="5" Кусково
+              .a-test.a-test-2
+                .answer.answer-1 data-check="5" data-lat="55.7325167" data-lng="37.5074696"
+                  a.option href="#" data-index="1" Китай-город
+                  a.option href="#" data-index="2" Проспект мира
+                  a.option href="#" data-index="3" Новокузнецкая
+                  a.option href="#" data-index="4" Марьина роща
+                  a.option href="#" data-index="5" Парк победы
+                .answer.answer-2 data-check="3" data-lat="55.748484" data-lng="37.588924"
+                  a.option href="#" data-index="1" Тверской бульвар, «Пушкинъ»
+                  a.option href="#" data-index="2" Пушкинская площадь, «Пирамида»
+                  a.option href="#" data-index="3" Арбат, «Прага»
+                  a.option href="#" data-index="4" Поварская, «ЦДЛ»
+                  a.option href="#" data-index="5" Ленинградский проспект, «Яр»
+                .answer.answer-3 data-check="1" data-lat="55.735204" data-lng="37.593074"
+                  a.option href="#" data-index="1" Льва Толстого
+                  a.option href="#" data-index="2" Достоевского
+                  a.option href="#" data-index="3" Лермонтовская
+                  a.option href="#" data-index="4" Проезд Карамзина
+                  a.option href="#" data-index="5" Солженицына
+                .answer.answer-4 data-check="3" data-lat="55.727474" data-lng="37.580683"
+                  a.option href="#" data-index="1" Войковская
+                  a.option href="#" data-index="2" Каховская
+                  a.option href="#" data-index="3" Фрунзенская
+                  a.option href="#" data-index="4" Волоколамская
+                  a.option href="#" data-index="5" Тимирязевская
+                .answer.answer-5 data-check="1" data-lat="55.708725" data-lng="37.543089"
+                  a.option href="#" data-index="1" Воробьевы горы
+                  a.option href="#" data-index="2" Сокольники
+                  a.option href="#" data-index="3" Лефортово
+                  a.option href="#" data-index="4" Петровский
+                  a.option href="#" data-index="5" Воронцовский
+              .a-test.a-test-3
+                .answer.answer-1 data-check="2" data-lat="55.768834" data-lng="37.596271"
+                  a.option href="#" data-index="1" «Украина»
+                  a.option href="#" data-index="2" «Пекин»
+                  a.option href="#" data-index="3" «Спутник»
+                  a.option href="#" data-index="4" «Метрополь»
+                  a.option href="#" data-index="5" «Националь»
+                .answer.answer-2 data-check="5" data-lat="55.764847" data-lng="37.60486"
+                  a.option href="#" data-index="1" Новослободская
+                  a.option href="#" data-index="2" Кутузовский проспект
+                  a.option href="#" data-index="3" Земляной вал
+                  a.option href="#" data-index="4" Садовая-Черногрязская
+                  a.option href="#" data-index="5" Тверская
+                .answer.answer-3 data-check="3" data-lat="55.7670942" data-lng="37.6223673"
+                  a.option href="#" data-index="1" Тишинская
+                  a.option href="#" data-index="2" Триумфальная
+                  a.option href="#" data-index="3" Трубная
+                  a.option href="#" data-index="4" Красная
+                  a.option href="#" data-index="5" Манежная
+                .answer.answer-4 data-check="1" data-lat="55.763912" data-lng="37.637343"
+                  a.option href="#" data-index="1" Тургеневская площадь
+                  a.option href="#" data-index="2" Пушкинская площадь
+                  a.option href="#" data-index="3" Гоголевский бульвар
+                  a.option href="#" data-index="4" Улица Серафимовича
+                  a.option href="#" data-index="5" Улица Баженова
+                .answer.answer-5 data-check="2" data-lat="55.7575781" data-lng="37.6329046"
+                  a.option href="#" data-index="1" Охотный ряд
+                  a.option href="#" data-index="2" Китай-город
+                  a.option href="#" data-index="3" Арбат
+                  a.option href="#" data-index="4" Замоскворечье
+                  a.option href="#" data-index="5" Тишинская площадь
+              .a-test.a-test-4
+                .answer.answer-1 data-check="4" data-lat="55.771682" data-lng="37.620685"
+                  a.option href="#" data-index="1" Рождественский
+                  a.option href="#" data-index="2" Сретенский
+                  a.option href="#" data-index="3" Зубовский
+                  a.option href="#" data-index="4" Цветной
+                  a.option href="#" data-index="5" Никитский
+                .answer.answer-2 data-check="3" data-lat="55.764928" data-lng="37.638436"
+                  a.option href="#" data-index="1" Патриаршие пруды
+                  a.option href="#" data-index="2" Неглинная
+                  a.option href="#" data-index="3" Чистые пруды
+                  a.option href="#" data-index="4" Воробьевы горы
+                  a.option href="#" data-index="5" Фрунзенская набережная
+                .answer.answer-3 data-check="3" data-lat="55.779653" data-lng="37.633619"
+                  a.option href="#" data-index="1" Тверская
+                  a.option href="#" data-index="2" Новослободская
+                  a.option href="#" data-index="3" Проспект Мира
+                  a.option href="#" data-index="4" Ленинский проспект
+                  a.option href="#" data-index="5" Варварка
+                .answer.answer-4 data-check="5" data-lat="55.7926615" data-lng="37.6778138"
+                  a.option href="#" data-index="1" Узкое
+                  a.option href="#" data-index="2" Битцевский парк
+                  a.option href="#" data-index="3" Тропаревский парк
+                  a.option href="#" data-index="4" Архангельское
+                  a.option href="#" data-index="5" Сокольники
+                .answer.answer-5 data-check="1" data-lat="55.821061" data-lng="37.641478"
+                  a.option href="#" data-index="1" ВДНХ
+                  a.option href="#" data-index="2" Манежная площадь
+                  a.option href="#" data-index="3" Парк победы
+                  a.option href="#" data-index="4" Парк культуры
+                  a.option href="#" data-index="5" Университет
+
+
+            .test-nav.test-nav-1
+            .test-nav.test-nav-2
+            .test-nav.test-nav-3
+            .test-nav.test-nav-4
+            .test-nav.test-nav-5
+
+          .state.calendar data-auto="1"
+            a.date.date_1 data-test="1" href="#"
+              .num 27
+              .mon Сентября
+            a.date.date_2 data-test="2" href="#"
+              .num 28
+              .mon Сентября
+            a.date.date_3 data-test="3" href="#"
+              .num 04
+              .mon Октября
+            a.date.date_4 data-test="4" href="#"
+              .num 05
+              .mon Октября
+            a.p-logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+          .state.about
+            a.start-btn href="#"
+            .social-links
+              a.fb target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckvue&pr=[RANDOM]&puid1=&puid2="
+              a.vk target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckvuf&pr=[RANDOM]&puid1=&puid2="
+              a.insta target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckvuc&pr=[RANDOM]&puid1=&puid2="
+            a.p-logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+          .state.rules
+            a.start-btn href="#"
+            a.p-logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
+
+          .underlayer
+            a.menu-icon href="#"
+            .menu
+              .list
+                a.l-item.menu-start href="#"
+                a.l-item.menu-rules href="#"
+                a.l-item.menu-calendar href="#"
+                a.l-item.menu-about href="#"
+                a.l-item.menu-drive href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckxfp&pr=[RANDOM]&puid1=&puid2=" target="_blank"
+              .share
+                a.fb href="#"
+                a.vk href="#"
+                /a.insta href="#"
+
+              a.close-menu href="#"
+
+    = javascript_include_tag 'widget'
+
+    = render '_/sharing_includes'
+

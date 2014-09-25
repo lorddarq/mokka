@@ -15,14 +15,15 @@ $g-sprite-dimensions: true;
 @import "g/*.png";
 @include all-g-sprites;
 
+
 /* Widget and states setup
 ---------------------------------------- */
 
 /* @import "widget_base"; */
 
 @include widget-states(
-  collapsed 990px 90px,
-  expanded 990px 250px
+  collapsed 768px 90px,
+  expanded 768px 1024px
 );
 $default-state: collapsed;
 
@@ -30,6 +31,7 @@ $background-color: #fff;
 
 @import "widget_base/styles";
 @import "widget_base/elements";
+
 
 
 /*
@@ -58,7 +60,7 @@ body {
 
 .icon {
   display: inline-block;
-  }
+}
 
 
 /* Expanded view
@@ -87,7 +89,7 @@ body {
 ---------------------------------------- */
 
 .b-view_collapsed {
-  background: inline('inline/collapsed_bg.png') 0 0 no-repeat;
+  background: inline('tablet/collapsed_bg.png') 0 0 no-repeat;
 
   .p-logo {
     position: absolute;
