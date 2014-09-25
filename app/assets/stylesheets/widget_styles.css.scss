@@ -340,12 +340,12 @@
 
   }
 
-  .calendar-btn {
+  .again-btn {
     bottom: 0;
     left: 239px;
   }
 
-  .again-btn {
+  .calendar-btn {
     bottom: 0;
     left: 502px;
   }
@@ -462,6 +462,14 @@
 .rules {
   display: none;
   background: inline('inline/rules_bg.png') 0 0 no-repeat;
+
+  .more-rules {
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 
   .start-btn {
     bottom: 0px;
