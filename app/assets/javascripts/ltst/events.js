@@ -10,5 +10,7 @@ var MokkoEvents = {
   map_again_btn_click: new signals.Signal(),
   map_calendar_btn_click: new signals.Signal(),
   fb_share: new signals.Signal(),
-  vk_share: new signals.Signal()
+  vk_share: new signals.Signal(),
+  menu_start_click: new signals.Signal(),
+  map_more_click: new signals.Signal()
 };

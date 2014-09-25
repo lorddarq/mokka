@@ -13,6 +13,7 @@ widget.hasStateClass 'expanded', 'expanded', { height: 250 }
 
 widget.hasStateActionButton '.b-open-btn', 'expand'
 widget.hasStateActionButton '.expand-link', 'expand'
+#widget.hasStateActionButton '.b-view_collapsed', 'expand'
 widget.hasStateActionButton '.b-close-btn', 'collapse'
 
 window.widget = widget
@@ -101,14 +102,17 @@ autoStart = ->
 
 $('.map .again-btn').click (e)->
   e.preventDefault()
+  MokkoEvents.map_again_btn_click.dispatch()
   showTest()
 
 $('.map .calendar-btn').click (e)->
   e.preventDefault()
+  MokkoEvents.map_calendar_btn_click.dispatch()
   showState('.state.calendar')
 
 $('.map-title .more-btn').click (e)->
   e.preventDefault()
+  MokkoEvents.map_more_click.dispatch()
   $('.map .more').slideDown(500, ->
     $('.map .more .more-btn').show()
   )
@@ -120,27 +124,33 @@ $('.map .more .more-btn').click (e)->
 
 $('.menu-icon').click (e)->
   e.preventDefault()
+  MokkoEvents.menu_btn_click.dispatch()
   $('.menu').addClass('show')
 
 $('.close-menu').click (e)->
   e.preventDefault()
+  MokkoEvents.close_menu_btn_click.dispatch()
   closeMenu()
 
 $('.menu .menu-start').click (e)->
   e.preventDefault()
+  MokkoEvents.menu_start_click.dispatch()
   autoStart()
 
 $('.menu .menu-calendar').click (e)->
   e.preventDefault()
+  MokkoEvents.menu_calendar_click.dispatch()
   showState('.state.calendar')
 
 $('.menu .menu-about').click (e)->
   e.preventDefault()
+  MokkoEvents.menu_about_click.dispatch()
   showState('.state.about')
 
 
 $('.menu .menu-rules').click (e)->
   e.preventDefault()
+  MokkoEvents.menu_rules_click.dispatch()
   showState('.state.rules')
 
 # share
@@ -165,6 +175,7 @@ openWindow = (url, width, height, centered) ->
 #  main
 $('.start-btn').click (e)->
   e.preventDefault()
+  MokkoEvents.start_btn_click.dispatch()
   autoStart()
 
 $('.map-title .more-btn').click (e)->
@@ -175,7 +186,7 @@ $('.map-title .more-btn').click (e)->
 
 $('.calendar .date').click (e)->
   e.preventDefault()
-
+  MokkoEvents.calendar_date_click.dispatch()
   test_id = $(e.target).attr('data-test')
   showTest()
 
@@ -183,6 +194,7 @@ $('.calendar .date').click (e)->
 
 $('a.option').click (e)->
   e.preventDefault()
+  MokkoEvents.answer_click.dispatch()
   setTestAnswer($(e.target).attr('data-index'))
 
 if !map
@@ -233,4 +245,9 @@ eventsTracker.mapEventsToSignals
   'event_14':
     signal: MokkoEvents.vk_share
     action: 'vk share'
-
+  'event_15':
+    signal: MokkoEvents.menu_start_click
+    action: 'menu start click'
+  'event_16':
+    signal: MokkoEvents.map_more_click
+    action: 'map more click'
