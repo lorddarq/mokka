@@ -27,20 +27,21 @@ function renderMarkers(map, pins)
       map: map,
       icon: image
     });
-//    google.maps.event.addListener(pinMarker, 'click', function(e) {
-////        LevisEvents.mapStoreMarkerClicked.dispatch();
-//
-//      $.each(_mapInfoBoxes, function(index, infoBox)
-//      {
-//        infoBox.remove();
-//      });
-//      _mapInfoBoxes = [];
-//      _mapInfoBoxes.push( new InfoBox({
-//        latlng: new google.maps.LatLng(pin.lat, pin.lng),
-//        map: map,
-//        content: '<h1>' + pin.time + ' 123 </h1>'
-//      }) );
-//    });
+
+    google.maps.event.addListener(pinMarker, 'click', function(e) {
+
+      $.each(_mapInfoBoxes, function(index, infoBox)
+      {
+        infoBox.remove();
+      });
+      _mapInfoBoxes = [];
+      _mapInfoBoxes.push( new InfoBox({
+        latlng: new google.maps.LatLng(pin.lat, pin.lng),
+        map: map,
+        content: '<div class="yel">' + pin.time + '</div>'
+      }) );
+    });
+
     pinMarker.setMap(map);
 
     markers.push(pinMarker);
@@ -93,7 +94,7 @@ function InfoBox(opts) {
   this.map_ = opts.map;
   this.content_ = opts.content;
   this.offsetVertical_ = -46;
-  this.offsetHorizontal_ = -77;
+  this.offsetHorizontal_ = -52;
   this.height_ = 46;
   this.width_ = 77;
 

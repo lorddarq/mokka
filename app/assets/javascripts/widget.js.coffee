@@ -81,7 +81,7 @@ setTestAnswer = (index)->
 
   if answer.attr('data-check') == index
     console.log(answer.attr('data-check'),index, answer.attr('data-check') == index)
-    pins.push({ lng: answer.attr('data-lng'), lat: answer.attr('data-lat') })
+    pins.push({ lng: answer.attr('data-lng'), lat: answer.attr('data-lat'), time: answer.attr('data-time') })
 
   question++;
   if question <= 5
