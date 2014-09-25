@@ -5,7 +5,7 @@
 widget = new Widget "Opel Mokka"
 
 widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
-widget.hasStateClass 'expanded', 'expanded', { height: 250 }
+widget.hasStateClass 'expanded', 'expand', { height: 250 }
 
 # widget.defaultState = 'collapsed'
 # widget.firstShowState = 'expanded'
