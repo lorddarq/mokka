@@ -39,7 +39,7 @@ body {
   position: relative;
   margin: 0 auto;
   width: 581px;
-  height: 371px;
+  height: 401px;
   background: inline('2/rules.png') center center no-repeat;
   margin-bottom: 50px;
 }
@@ -47,8 +47,8 @@ body {
 .car {
   position: relative;
   margin: 0 auto;
-  width: 450px;
-  height: 404px;
+  width: 566px;
+  height: 417px;
   background: inline('2/car.png') center center no-repeat;
 }
 
@@ -69,6 +69,8 @@ body {
     &:hover {
       background: inline('2/vk_hover.png') 0 0 no-repeat;
     }
+
+    transition: 0.2s all linear;
   }
 
   .fb {
@@ -82,6 +84,8 @@ body {
     &:hover {
       background: inline('2/fb_hover.png') 0 0 no-repeat;
     }
+
+    transition: 0.2s all linear;
   }
 
   .insta {
@@ -95,7 +99,10 @@ body {
     &:hover {
       background: inline('2/insta_hover.png') 0 0 no-repeat;
     }
+
+    transition: 0.2s all linear;
   }
+
 }
 
 

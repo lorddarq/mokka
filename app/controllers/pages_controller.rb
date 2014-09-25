@@ -1,7 +1,15 @@
 class PagesController < ApplicationController
-  after_action :allow_widget_iframe, only: :widget
+  after_action :allow_widget_iframe, only: [:widget, :tablet, :phone]
 
   def widget
+    render layout: false
+  end
+
+  def tablet
+    render layout: false
+  end
+
+  def phone
     render layout: false
   end
 

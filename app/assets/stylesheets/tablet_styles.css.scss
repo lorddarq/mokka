@@ -7,41 +7,6 @@
   left: 0;
 }
 
-.map-popup {
-  position: absolute;
-  width: 77px;
-  height: 44px;
-  background: inline('inline/pin_info.png') 0 0 no-repeat;
-
-  span {
-    width: 100%;
-//    ._13_00_–_13_40 {
-//      font-size: 5.135px;
-//      font-family: "Opel Sans Condensed Headline";
-//      color: rgb( 255, 191, 0 );
-//      font-weight: bold;
-//      line-height: 6.818;
-//      text-align: center;
-//      -moz-transform: matrix( 2.43953457937946,0,0,2.30453887119676,0,0);
-//      -webkit-transform: matrix( 2.43953457937946,0,0,2.30453887119676,0,0);
-//      -ms-transform: matrix( 2.43953457937946,0,0,2.30453887119676,0,0);
-//      position: absolute;
-//      left: 25.325px;
-//      top: 45.911px;
-//      z-index: 4;
-//    }
-
-  }
-}
-
-.map-popup-close {
-  position: absolute;
-  width: 77px;
-  height: 44px;
-  top: 0;
-  left: 0;
-}
-
 .p-logo {
   position: absolute;
   width: 50px;
