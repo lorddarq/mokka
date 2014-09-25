@@ -45,7 +45,7 @@ showTestQuestion = ()->
   $('.test-bg .test-bg-' + question).show()
 
   #показываем вопрос
-  $('.question-' + test_id).text($('.question-' + test_id).attr('data-text-' + question))
+  $('.question-' + test_id).html($('.question-' + test_id).attr('data-text-' + question))
 
   #обновляем ответы
   $('.answer').hide()
