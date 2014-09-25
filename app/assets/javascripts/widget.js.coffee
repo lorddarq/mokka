@@ -13,7 +13,7 @@ widget.hasStateClass 'expanded', 'expand', { height: 250 }
 
 widget.hasStateActionButton '.b-open-btn', 'expand'
 widget.hasStateActionButton '.expand-link', 'expand'
-#widget.hasStateActionButton '.b-view_collapsed', 'expand'
+widget.hasStateActionButton '.b-view_collapsed', 'expand'
 widget.hasStateActionButton '.b-close-btn', 'collapse'
 
 window.widget = widget
