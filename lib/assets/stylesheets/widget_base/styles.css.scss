@@ -15,7 +15,7 @@ $widget-height: get-state-height();
   overflow:hidden;
   position:relative; z-index:1;
   text-align:left;
-  border:$border-width solid $border-color;
+  border:$border-width solid #fff;
   background:$background-color;
   }
 
