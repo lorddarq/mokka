@@ -14,7 +14,6 @@
 #= require jquery_ujs
 
 receiveMessage = (event)->
-  console.log event
   if event.data == "widget_inited"
     $('.widget iframe').contents().find('.b-view_expanded').css('top', '1px')
     $('.widget iframe').contents().find('.b-widget_expanded').css('height', '250px')

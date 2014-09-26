@@ -200,7 +200,6 @@ $('a.option').click (e)->
   setTestAnswer($(e.target).attr('data-index'))
 
 $ ->
-  console.log('123')
   if widget.isLocal
     window.parent.postMessage('widget_inited', '*')
 
