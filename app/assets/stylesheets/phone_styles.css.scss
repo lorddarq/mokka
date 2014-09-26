@@ -490,9 +490,9 @@
     position: absolute;
     top: 45px;
     left: 941px;
-    background: inline('phone/menu_icon.png') 0 0 no-repeat;
+    background: inline('phone/menu_btn.png') 0 0 no-repeat;
     &:hover {
-      background: inline('phone/menu_icon_hover.png') 0 0 no-repeat;
+      background: inline('phone/menu_btn_hover.png') 0 0 no-repeat;
     }
 
     transition: 0.2s all linear;
@@ -500,7 +500,7 @@
 
   .menu {
 
-    background: inline('phone/menu_bg.png') 0 -4px no-repeat;
+    background: inline('phone/menu_bg.jpg') 0 -4px no-repeat;
     width: 211px;
     height: 250px;
     position: absolute;
