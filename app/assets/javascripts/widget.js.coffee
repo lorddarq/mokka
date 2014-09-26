@@ -94,6 +94,8 @@ setTestAnswer = (index)->
     $('.map-title .title').text(title)
     $('.more .title').text(title)
     showState('.state.map')
+    if !map
+      map = showMap([]);
     renderMarkers(map, pins)
 
 autoStart = ->
@@ -197,9 +199,10 @@ $('a.option').click (e)->
   MokkoEvents.answer_click.dispatch()
   setTestAnswer($(e.target).attr('data-index'))
 
-if !map
-  map = showMap([]);
-
+$ ->
+  console.log('123')
+  if widget.isLocal
+    window.parent.postMessage('widget_inited', '*')
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals
