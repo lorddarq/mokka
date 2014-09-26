@@ -28,10 +28,11 @@ function renderMarkers(map, pins)
       icon: image
     });
 
-    google.maps.event.addListener(pinMarker, 'click', function(e) {
+    google.maps.event.addListener(pinMarker, 'mouseover', function(e) {
 
       $.each(_mapInfoBoxes, function(index, infoBox)
       {
+        infoBox.setMap(null);
         infoBox.remove();
       });
       _mapInfoBoxes = [];
@@ -41,6 +42,16 @@ function renderMarkers(map, pins)
         content: '<div class="yel">' + pin.time + '</div>'
       }) );
     });
+
+    google.maps.event.addListener(pinMarker, 'mouseout', function(e) {
+
+      $.each(_mapInfoBoxes, function(index, infoBox)
+      {
+        infoBox.setMap(null);
+        infoBox.remove();
+      });
+    });
+
 
     pinMarker.setMap(map);
 
@@ -166,17 +177,17 @@ InfoBox.prototype.createElement = function() {
     var $div = $('<div />', {'class': 'map-popup', 'data-latlng': this.latlng_.lat() + ',' + this.latlng_.lng()});
     $div.append(this.content_);
 
-    var closeButton = document.createElement('div');
-    closeButton.className = 'map-popup-close';
-    google.maps.event.addDomListener(closeButton, 'click', removeInfoBox(this));
-    function removeInfoBox(ib) {
-      return function() {
-        ib.setMap(null);
-      };
-    }
+//    var closeButton = document.createElement('div');
+//    closeButton.className = 'map-popup-close';
+//    google.maps.event.addDomListener(closeButton, 'click', removeInfoBox(this));
+//    function removeInfoBox(ib) {
+//      return function() {
+//        ib.setMap(null);
+//      };
+//    }
 
     div = this.div_ = $div[0];
-    div.appendChild(closeButton);
+//    div.appendChild(closeButton);
     panes.floatPane.appendChild(div);
     this.panMap();
   } else if (div.parentNode != panes.floatPane) {
