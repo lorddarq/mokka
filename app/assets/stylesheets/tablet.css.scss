@@ -72,7 +72,7 @@ body {
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 250px;
+    height: 1024px;
 
   }
 }
@@ -91,14 +91,14 @@ body {
 .b-view_collapsed {
   background: inline('tablet/collapsed_bg.png') 0 0 no-repeat;
 
-  .p-logo {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    //  z-index: 1000;
-    right: 10px;
-    bottom: 8px;
-  }
+//  .p-logo {
+//    position: absolute;
+//    width: 50px;
+//    height: 50px;
+//    //  z-index: 1000;
+//    right: 10px;
+//    bottom: 8px;
+//  }
 }
 
 @import "tablet_styles";

@@ -100,14 +100,14 @@ body {
 .b-view_collapsed {
   background: inline('phone/collapsed_bg.png') 0 0 no-repeat;
 
-//  .p-logo {
-//    position: absolute;
-//    width: 50px;
-//    height: 50px;
-//    //  z-index: 1000;
-//    right: 10px;
-//    bottom: 8px;
-//  }
+  .p-logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    //  z-index: 1000;
+    left: 0px;
+    bottom: 0px;
+  }
 }
 
 @import "phone_styles";

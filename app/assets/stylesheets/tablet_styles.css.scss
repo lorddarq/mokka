@@ -24,25 +24,25 @@
   top: 13px;
 
   &.logo{
-    background: inline('phone/logo.png') 0 0 no-repeat;
+    background: inline('tablet/logo.png') 0 0 no-repeat;
   }
 }
 
 .start-btn {
   position: absolute;
-  width: 534px;
-  height: 104px;
-//  background: inline('phone/start_btn.png') 0 0 no-repeat;
+  width: 267px;
+  height: 71px;
+//  background: inline('tablet/start_btn.png') 0 0 no-repeat;
 
   &:hover {
-//    background: inline('phone/start_btn_hover.png') 0 0 no-repeat;
+//    background: inline('tablet/start_btn_hover.png') 0 0 no-repeat;
   }
 
   &.start2 {
-    background: inline('phone/main_start_btn.png') 0 0 no-repeat;
+    background: inline('tablet/main_start_btn.png') 0 0 no-repeat;
 
     &:hover {
-      background: inline('phone/main_start_btn_hover.png') 0 0 no-repeat;
+//      background: inline('tablet/main_start_btn_hover.png') 0 0 no-repeat;
     }
   }
 
@@ -53,10 +53,10 @@
   position: absolute;
   width: 259px;
   height: 52px;
-  background: inline('phone/calendar_btn.png') 0 0 no-repeat;
+  background: inline('tablet/calendar_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('phone/calendar_btn_hover.png') 0 0 no-repeat;
+//    background: inline('tablet/calendar_btn_hover.png') 0 0 no-repeat;
   }
 
 //  transition: 0.2s all linear;
@@ -66,10 +66,10 @@
   position: absolute;
   width: 57px;
   height: 52px;
-  background: inline('phone/again_btn.png') 0 0 no-repeat;
+  background: inline('tablet/again_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('phone/again_btn_hover.png') 0 0 no-repeat;
+//    background: inline('tablet/again_btn_hover.png') 0 0 no-repeat;
   }
 
 //  transition: 0.2s all linear;
@@ -82,17 +82,17 @@
   bottom: 0px;
   left: 50%;
   margin-left: -85px;
-  background: inline('phone/more_btn.png') 0 0 no-repeat;
+  background: inline('tablet/more_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('phone/more_btn_hover.png') 0 0 no-repeat;
+//    background: inline('tablet/more_btn_hover.png') 0 0 no-repeat;
   }
 
   &.close {
-    background: inline('phone/more_close_btn.png') 0 0 no-repeat;
+    background: inline('tablet/more_close_btn.png') 0 0 no-repeat;
 
     &:hover {
-      background: inline('phone/more_close_btn_hover.png') 0 0 no-repeat;
+//      background: inline('tablet/more_close_btn_hover.png') 0 0 no-repeat;
     }
   }
 
@@ -123,9 +123,9 @@
 
     width: 51px;
     height: 48px;
-    background: inline('phone/link_vk.png') 0 0 no-repeat;
+    background: inline('tablet/link_vk.png') 0 0 no-repeat;
     &:hover {
-      background: inline('phone/link_vk_hover.png') 0 0 no-repeat;
+//      background: inline('tablet/link_vk_hover.png') 0 0 no-repeat;
     }
 
 //    transition: 0.2s all linear;
@@ -136,11 +136,11 @@
     top: 0px;
     left: 0px;
 
-    width: 51px;
-    height: 48px;
-    background: inline('phone/link_fb.png') 0 0 no-repeat;
+    width: 84px;
+    height: 80px;
+    background: inline('tablet/link_fb.png') 0 0 no-repeat;
     &:hover {
-      background: inline('phone/link_fb_hover.png') 0 0 no-repeat;
+//      background: inline('tablet/link_fb_hover.png') 0 0 no-repeat;
     }
 
 //    transition: 0.2s all linear;
@@ -151,11 +151,11 @@
     top: 0;
     left: 122px;
 
-    width: 58px;
-    height: 51px;
-    background: inline('phone/link_insta.png') 0 -1px no-repeat;
+    width: 85px;
+    height: 80px;
+    background: inline('tablet/link_insta.png') 0 0px no-repeat;
     &:hover {
-      background: inline('phone/link_insta_hover.png') 0 -1px no-repeat;
+//      background: inline('tablet/link_insta_hover.png') 0 -1px no-repeat;
     }
 
 //    transition: 0.2s all linear;
@@ -163,7 +163,7 @@
 }
 
 .main {
-  background: inline('phone/main_bg.jpg') 0 0 no-repeat;
+  background: inline('tablet/main_bg.jpg') 0 0 no-repeat;
 
   .start-btn {
     top: 422px;
@@ -206,10 +206,10 @@
 
   .orange {
     position: absolute;
-    width: 320px;
-    height: 220px;
-//    background: inline('phone/orange.png') 0 0 no-repeat;
-    top: 94px;
+    width: 768px;
+    height: 540px;
+//    background: inline('tablet/orange.png') 0 0 no-repeat;
+    top: 130px;
     left: 0;
   }
 }
@@ -219,19 +219,19 @@
   .test-bg {
 
     .test-bg-1 {
-      background: inline('phone/test/bg_1.jpg') 0 0 no-repeat;
+      background: inline('tablet/test/bg_1.jpg') 0 0 no-repeat;
     }
     .test-bg-2 {
-      background: inline('phone/test/bg_2.jpg') 0 0 no-repeat;
+      background: inline('tablet/test/bg_2.jpg') 0 0 no-repeat;
     }
     .test-bg-3 {
-      background: inline('phone/test/bg_3.jpg') 0 0 no-repeat;
+      background: inline('tablet/test/bg_3.jpg') 0 0 no-repeat;
     }
     .test-bg-4 {
-      background: inline('phone/test/bg_4.jpg') 0 0 no-repeat;
+      background: inline('tablet/test/bg_4.jpg') 0 0 no-repeat;
     }
     .test-bg-5 {
-      background: inline('phone/test/bg_5.jpg') 0 0 no-repeat;
+      background: inline('tablet/test/bg_5.jpg') 0 0 no-repeat;
     }
   }
 
@@ -312,23 +312,23 @@
     left: 0;
 
     &.test-nav-1 {
-      background: inline('phone/test/nav-bg_1.png') 0 0 no-repeat;
+      background: inline('tablet/test/nav-bg_1.png') 0 0 no-repeat;
     }
 
     &.test-nav-2 {
-      background: inline('phone/test/nav-bg_2.png') 0 0 no-repeat;
+      background: inline('tablet/test/nav-bg_2.png') 0 0 no-repeat;
     }
 
     &.test-nav-3 {
-      background: inline('phone/test/nav-bg_3.png') 0 0 no-repeat;
+      background: inline('tablet/test/nav-bg_3.png') 0 0 no-repeat;
     }
 
     &.test-nav-4 {
-      background: inline('phone/test/nav-bg_4.png') 0 0 no-repeat;
+      background: inline('tablet/test/nav-bg_4.png') 0 0 no-repeat;
     }
 
     &.test-nav-5 {
-      background: inline('phone/test/nav-bg_5.png') 0 0 no-repeat;
+      background: inline('tablet/test/nav-bg_5.png') 0 0 no-repeat;
     }
 
     transition: 0.5s all linear;
@@ -349,8 +349,8 @@
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 241px;
-    background: inline('phone/map_title_bg.png') 0 0 no-repeat;
+    height: 365px;
+    background: inline('tablet/map_title_bg.jpg') 0 0 no-repeat;
 
     .title {
       position: absolute;
@@ -376,7 +376,7 @@
   }
 
   .more {
-    background: inline('phone/more_bg.png') 0 0 no-repeat;
+    background: inline('tablet/more_bg.jpg') 0 0 no-repeat;
 
     .title {
       position: absolute;
@@ -409,10 +409,10 @@
 
 .calendar {
   display: none;
-  background: inline('phone/bg_1.png') 0 0 no-repeat;
+  background: inline('tablet/bg_1.jpg') 0 0 no-repeat;
 
   .content{
-    background: inline('phone/calendar_content.png') 0 0 no-repeat;
+//    background: inline('tablet/calendar_content.png') 0 0 no-repeat;
   }
 
   .date{
@@ -454,9 +454,9 @@
 
     }
 
-    background: inline('phone/date.png') 0 0 no-repeat;
+    background: inline('tablet/date.png') 0 0 no-repeat;
     &:hover {
-      background: inline('phone/date_hover.png') 0 0 no-repeat;
+      background: inline('tablet/date_hover.png') 0 0 no-repeat;
 
       .num {
         color: #FFFFFF;
@@ -493,10 +493,10 @@
 
 .about {
   display: none;
-  background: inline('phone/bg_1.png') 0 0 no-repeat;
+  background: inline('tablet/bg_1.jpg') 0 0 no-repeat;
 
   .content{
-    background: inline('phone/about_content.png') 0 0 no-repeat;
+    background: inline('tablet/about_content_bg.png') 0 0 no-repeat;
 
   }
 
@@ -509,7 +509,7 @@
 
 .rules {
   display: none;
-  background: inline('phone/bg_1.png') 0 0 no-repeat;
+  background: inline('tablet/bg_1.jpg') 0 0 no-repeat;
 
   .start-btn {
     position: absolute;
@@ -517,18 +517,18 @@
     left: 26px;
     width: 267px;
     height: 52px;
-    background: inline('phone/back_btn.png') 0 0 no-repeat;
+    background: inline('tablet/main_start_btn.png') 0 0 no-repeat;
     margin-left: 0;
 
     &:hover {
-      background: inline('phone/back_btn_hover.png') 0 0 no-repeat;
+//      background: inline('tablet/back_btn_hover.png') 0 0 no-repeat;
     }
 
 //    transition: 0.2s all linear;
   }
 
   .content{
-    background: inline('phone/rules_content.png') center 0 no-repeat;
+    background: inline('tablet/rules_content.png') center 0 no-repeat;
 
     .img {
 
@@ -548,27 +548,27 @@
       }
 
       .r_1 {
-        background: inline('phone/rule_1.png') center 0 no-repeat;
+        background: inline('tablet/r_1.png') center 0 no-repeat;
       }
 
       .r_2 {
 
-        background: inline('phone/rule_2.png') center 0 no-repeat;
+        background: inline('tablet/r_2.png') center 0 no-repeat;
       }
 
       .r_3 {
 
-        background: inline('phone/rule_3.png') center 0 no-repeat;
+        background: inline('tablet/r_3.png') center 0 no-repeat;
       }
 
       .r_4 {
 
-        background: inline('phone/rule_4.png') center 0 no-repeat;
+        background: inline('tablet/r_4.png') center 0 no-repeat;
       }
 
       .r_5 {
 
-        background: inline('phone/rule_5.png') center 0 no-repeat;
+        background: inline('tablet/r_5.png') center 0 no-repeat;
       }
 
       .active {
@@ -591,14 +591,14 @@
       display: inline-block;
       width: 29px;
       height: 28px;
-      background: inline('phone/circle.png') 0 0 no-repeat;
+      background: inline('tablet/circle.png') 0 0 no-repeat;
       padding: 0 5px;
       &:hover {
-        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+        background: inline('tablet/circle_hover.png') 0 0 no-repeat;
       }
 
       &.active {
-        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+        background: inline('tablet/circle_hover.png') 0 0 no-repeat;
       }
 
       transition: 0.2s background linear;
@@ -608,16 +608,16 @@
 
 .underlayer {
   .menu-icon {
-    width: 33px;
-    height: 26px;
+    width: 67px;
+    height: 53px;
     position: absolute;
-    top: 16px;
-    left: 145px;
-    background: inline('phone/menu_btn.png') 0 0 no-repeat;
+    top: 31px;
+    left: 351px;
+    background: inline('tablet/menu_btn.png') 0 0 no-repeat;
     &:hover {
-      width: 33px;
-      height: 26px;
-      background: inline('phone/menu_btn_hover.png') 0 0 no-repeat;
+      width: 67px;
+      height: 53px;
+      background: inline('tablet/menu_btn.png') 0 0 no-repeat;
     }
 
 //    transition: 0.2s all linear;
@@ -629,9 +629,9 @@
 
   .menu {
 
-    background: inline('phone/menu_bg.jpg') 0 0px no-repeat;
+    background: inline('tablet/menu_bg.jpg') 0 0px no-repeat;
     position: absolute;
-    top: -504px;
+    top: -1024px;
     left: 0px;
     transition: top 0.3s linear;
 //    display: none;
@@ -654,50 +654,50 @@
       .menu-start {
         width: 240px;
         height: 40px;
-        background: inline('phone/menu_text.png') 0 0px no-repeat;
+//        background: inline('tablet/menu_text.png') 0 0px no-repeat;
 
         &:hover {
-          background: inline('phone/menu_text_hover.png') 0 0px no-repeat;
+//          background: inline('tablet/menu_text_hover.png') 0 0px no-repeat;
         }
       }
 
       .menu-rules {
         width: 240px;
         height: 53px;
-        background: inline('phone/menu_text.png') 0 -40px no-repeat;
+//        background: inline('tablet/menu_text.png') 0 -40px no-repeat;
 
         &:hover {
-          background: inline('phone/menu_text_hover.png') 0 -40px no-repeat;
+//          background: inline('tablet/menu_text_hover.png') 0 -40px no-repeat;
         }
       }
 
       .menu-calendar {
         width: 240px;
         height: 53px;
-        background: inline('phone/menu_text.png') 0 -93px no-repeat;
+//        background: inline('tablet/menu_text.png') 0 -93px no-repeat;
 
         &:hover {
-          background: inline('phone/menu_text_hover.png') 0 -93px no-repeat;
+//          background: inline('tablet/menu_text_hover.png') 0 -93px no-repeat;
         }
       }
 
       .menu-about {
         width: 240px;
         height: 53px;
-        background: inline('phone/menu_text.png') 0 -146px no-repeat;
+//        background: inline('tablet/menu_text.png') 0 -146px no-repeat;
 
         &:hover {
-          background: inline('phone/menu_text_hover.png') 0 -146px no-repeat;
+//          background: inline('tablet/menu_text_hover.png') 0 -146px no-repeat;
         }
       }
 
       .menu-drive {
         width: 240px;
         height: 40px;
-        background: inline('phone/menu_text.png') 0 -199px no-repeat;
+//        background: inline('tablet/menu_text.png') 0 -199px no-repeat;
 
         &:hover {
-          background: inline('phone/menu_text_hover.png') 0 -199px no-repeat;
+//          background: inline('tablet/menu_text_hover.png') 0 -199px no-repeat;
         }
       }
 
@@ -712,9 +712,9 @@
 
         width: 49px;
         height: 49px;
-        background: inline('phone/vk.png') 0 0 no-repeat;
+        background: inline('tablet/vk.png') 0 0 no-repeat;
         &:hover {
-          background: inline('phone/vk_hover.png') 0 0 no-repeat;
+//          background: inline('tablet/vk_hover.png') 0 0 no-repeat;
         }
 
 //        transition: 0.2s all linear;
@@ -727,9 +727,9 @@
 
         width: 49px;
         height: 49px;
-        background: inline('phone/fb.png') 0 0 no-repeat;
+        background: inline('tablet/fb.png') 0 0 no-repeat;
         &:hover {
-          background: inline('phone/fb_hover.png') 0 0 no-repeat;
+//          background: inline('tablet/fb_hover.png') 0 0 no-repeat;
         }
 
 //        transition: 0.2s all linear;
@@ -742,9 +742,9 @@
 
         width: 20px;
         height: 20px;
-//        background: inline('phone/insta.png') 0 0 no-repeat;
+//        background: inline('tablet/insta.png') 0 0 no-repeat;
         &:hover {
-//          background: inline('phone/insta_hover.png') 0 0 no-repeat;
+//          background: inline('tablet/insta_hover.png') 0 0 no-repeat;
         }
 
 //        transition: 0.2s all linear;
@@ -757,10 +757,10 @@
       height: 45px;
       top: 420px;
       left: 139px;
-      background: inline('phone/menu_close.png') 0 0 no-repeat;
+      background: inline('tablet/menu_close_btn.png') 0 0 no-repeat;
 
       &:hover {
-        background: inline('phone/menu_close_hover.png') 0 0 no-repeat;
+//        background: inline('tablet/menu_close_hover.png') 0 0 no-repeat;
       }
 
 //      transition: 0.2s all linear;
