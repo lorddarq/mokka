@@ -29,6 +29,13 @@ map_title = ['правильных ответов',
              'правильных ответа',
              'правильных ответов']
 
+map_title_phone = ['правильных<br />ответов',
+             'правильный<br /> ответ',
+             'правильных<br /> ответа',
+             'правильных<br /> ответа',
+             'правильных<br /> ответа',
+             'правильных<br /> ответов']
+
 closeMenu = ->
   $('.menu').removeClass('show')
 
@@ -91,8 +98,12 @@ setTestAnswer = (index)->
     #show map
     $('.map .more').hide()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
-    $('.map-title .title').text(title)
-    $('.more .title').text(title)
+
+    if appMode == 'phone'
+      title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
+
+    $('.map-title .title').html(title)
+    $('.more .title').html(title)
     showState('.state.map')
     if !map
       map = showMap([]);

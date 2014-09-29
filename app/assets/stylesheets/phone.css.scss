@@ -23,7 +23,7 @@ $g-sprite-dimensions: true;
 
 @include widget-states(
   collapsed 320px 50px,
-  expanded 320px 500px
+  expanded 320px 504px
 );
 $default-state: collapsed;
 
@@ -53,10 +53,19 @@ body {
 
 .b-open-btn {
   // @include g-sprite(button-open);
-  }
+  width: 32px;
+  height: 32px;
+  right: 7px;
+  top: 8px;
+  background: inline('phone/touch_small.png') 0 0 no-repeat;
+}
 .b-close-btn {
+  width: 58px;
+  height: 56px;
+  background: inline('phone/touch.png') 0 0 no-repeat;
   // @include g-sprite(button-close);
-  }
+  top: 9px;
+}
 
 .icon {
   display: inline-block;
@@ -72,7 +81,7 @@ body {
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 500px;
+    height: 504px;
 
   }
 }
