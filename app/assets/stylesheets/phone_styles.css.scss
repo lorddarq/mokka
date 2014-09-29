@@ -164,6 +164,7 @@
 
 .main {
   background: inline('phone/main_bg.jpg') 0 0 no-repeat;
+  z-index: 10;
 
   .start-btn {
     top: 422px;
@@ -621,6 +622,8 @@
     position: absolute;
     top: 16px;
     left: 145px;
+    z-index: 11;
+
     background: inline('phone/menu_btn.png') 0 0 no-repeat;
     &:hover {
       width: 33px;
@@ -642,6 +645,7 @@
     top: -504px;
     left: 0px;
     transition: top 0.3s linear;
+
 //    display: none;
 
     &.show {
