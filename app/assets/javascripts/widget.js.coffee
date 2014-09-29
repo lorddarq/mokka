@@ -10,7 +10,7 @@ if appMode == 'widget'
 
 if appMode == 'phone'
   widget.hasStateClass 'collapsed', 'collapse', { height: 50 }
-  widget.hasStateClass 'expanded', 'expand', { height: 1008 }
+  widget.hasStateClass 'expanded', 'expand', { height: 504 }
 
 if appMode == 'tablet'
   widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
