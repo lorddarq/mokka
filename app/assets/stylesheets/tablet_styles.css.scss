@@ -2,113 +2,133 @@
 .bg {
   position: absolute;
   width: $widget-width;
-  height: 250px;
+  height: 1024px;
   top: 0;
   left: 0;
 }
 
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .p-logo {
   position: absolute;
-  width: 50px;
-  height: 50px;
-//  z-index: 1000;
-  right: 10px;
-  bottom: 18px;
+  width: 80px;
+  height: 80px;
+  //  z-index: 1000;
+  left: 14px;
+  top: 13px;
 
   &.logo{
-    background: inline('inline/logo.png') 0 0 no-repeat;
+    background: inline('phone/logo.png') 0 0 no-repeat;
   }
 }
 
 .start-btn {
   position: absolute;
-  width: 250px;
-  height: 44px;
-  background: inline('inline/start_btn.png') 0 0 no-repeat;
+  width: 534px;
+  height: 104px;
+//  background: inline('phone/start_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('inline/start_btn_hover.png') 0 0 no-repeat;
+//    background: inline('phone/start_btn_hover.png') 0 0 no-repeat;
   }
 
   &.start2 {
-    background: inline('inline/main_start_btn.png') 0 0 no-repeat;
+    background: inline('phone/main_start_btn.png') 0 0 no-repeat;
 
     &:hover {
-      background: inline('inline/main_start_btn_hover.png') 0 0 no-repeat;
+      background: inline('phone/main_start_btn_hover.png') 0 0 no-repeat;
     }
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .calendar-btn {
   position: absolute;
-  width: 250px;
-  height: 44px;
-  background: inline('inline/calendar_btn.png') 0 0 no-repeat;
+  width: 259px;
+  height: 52px;
+  background: inline('phone/calendar_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('inline/calendar_btn_hover.png') 0 0 no-repeat;
+    background: inline('phone/calendar_btn_hover.png') 0 0 no-repeat;
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .again-btn {
   position: absolute;
-  width: 250px;
-  height: 44px;
-  background: inline('inline/again_btn.png') 0 0 no-repeat;
+  width: 57px;
+  height: 52px;
+  background: inline('phone/again_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('inline/again_btn_hover.png') 0 0 no-repeat;
+    background: inline('phone/again_btn_hover.png') 0 0 no-repeat;
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .more-btn {
   position: absolute;
-  width: 96px;
-  height: 12px;
-  bottom: 5px;
+  width: 171px;
+  height: 35px;
+  bottom: 0px;
   left: 50%;
-  margin-left: -48px;
-  background: inline('inline/more_btn.png') 0 0 no-repeat;
+  margin-left: -85px;
+  background: inline('phone/more_btn.png') 0 0 no-repeat;
 
   &:hover {
-    background: inline('inline/more_btn_hover.png') 0 0 no-repeat;
+    background: inline('phone/more_btn_hover.png') 0 0 no-repeat;
   }
 
   &.close {
-    background: inline('inline/more_close_btn.png') 0 0 no-repeat;
+    background: inline('phone/more_close_btn.png') 0 0 no-repeat;
 
     &:hover {
-      background: inline('inline/more_close_btn_hover.png') 0 0 no-repeat;
+      background: inline('phone/more_close_btn_hover.png') 0 0 no-repeat;
     }
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
+}
+
+.page-title
+{
+  font-size: 72px;
+  font-family: "Opel-Sans-Condensed-Headline";
+  color: rgb( 40, 33, 14 );
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .social-links {
   position: absolute;
-  top: 187px;
-  left: 37px;
+  top: 431px;
+  left: 73px;
 
   .vk {
     position: absolute;
     top: 0px;
-    left: 46px;
+    left: 63px;
 
-    width: 40px;
-    height: 36px;
-    background: inline('inline/link_vk.png') 0 0 no-repeat;
+    width: 51px;
+    height: 48px;
+    background: inline('phone/link_vk.png') 0 0 no-repeat;
     &:hover {
-      background: inline('inline/link_vk_hover.png') 0 0 no-repeat;
+      background: inline('phone/link_vk_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .fb {
@@ -116,38 +136,39 @@
     top: 0px;
     left: 0px;
 
-    width: 36px;
-    height: 36px;
-    background: inline('inline/link_fb.png') 0 0 no-repeat;
+    width: 51px;
+    height: 48px;
+    background: inline('phone/link_fb.png') 0 0 no-repeat;
     &:hover {
-      background: inline('inline/link_fb_hover.png') 0 0 no-repeat;
+      background: inline('phone/link_fb_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .insta {
     position: absolute;
     top: 0;
-    left: 94px;
+    left: 122px;
 
-    width: 36px;
-    height: 36px;
-    background: inline('inline/link_insta.png') 0 0 no-repeat;
+    width: 58px;
+    height: 51px;
+    background: inline('phone/link_insta.png') 0 -1px no-repeat;
     &:hover {
-      background: inline('inline/link_insta_hover.png') 0 0 no-repeat;
+      background: inline('phone/link_insta_hover.png') 0 -1px no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 }
 
 .main {
-   background: inline('inline/main_bg.png') 0 0 no-repeat;
+  background: inline('phone/main_bg.jpg') 0 0 no-repeat;
 
   .start-btn {
-    top: 175px;
-    left: 39px;
+    top: 422px;
+    left: 64px;
+    width: 196px;
   }
 
   .orange {
@@ -157,6 +178,40 @@
     right: 70px;
     top:0px;
   }
+
+  .title {
+
+    font-size: 66px;
+    font-family: "OpelSansCondensed";
+    color: rgb( 202, 70, 34 );
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 694px;
+    left: 0;
+  }
+
+  .description {
+    font-size: 36px;
+    font-family: "Opel-Sans-Condensed-Headline";
+    color: rgb( 32, 22, 0 );
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 840px;
+    left: 0;
+  }
+
+  .orange {
+    position: absolute;
+    width: 320px;
+    height: 220px;
+//    background: inline('phone/orange.png') 0 0 no-repeat;
+    top: 94px;
+    left: 0;
+  }
 }
 
 .test {
@@ -164,47 +219,49 @@
   .test-bg {
 
     .test-bg-1 {
-      background: inline('inline/test/bg_1.jpg') 0 0 no-repeat;
+      background: inline('phone/test/bg_1.jpg') 0 0 no-repeat;
     }
     .test-bg-2 {
-      background: inline('inline/test/bg_2.jpg') 0 0 no-repeat;
+      background: inline('phone/test/bg_2.jpg') 0 0 no-repeat;
     }
     .test-bg-3 {
-      background: inline('inline/test/bg_3.jpg') 0 0 no-repeat;
+      background: inline('phone/test/bg_3.jpg') 0 0 no-repeat;
     }
     .test-bg-4 {
-      background: inline('inline/test/bg_4.jpg') 0 0 no-repeat;
+      background: inline('phone/test/bg_4.jpg') 0 0 no-repeat;
     }
     .test-bg-5 {
-      background: inline('inline/test/bg_5.jpg') 0 0 no-repeat;
+      background: inline('phone/test/bg_5.jpg') 0 0 no-repeat;
     }
   }
 
   .questions {
-    display: table;
-    position: absolute;
-    top: 0;
+    display: block;
+    position: relative;
+    top: 80px;
     left: 0;
-    height: 100px;
+//    height: 100px;
 
     .question {
-      display: table-cell;
+      display: block;
       vertical-align: middle;
-      width: 880px;
-      padding: 10px 55px;
-      font-size: 32px;
+      width: 300px;
+      padding: 0px 10px 0 10px;
+      font-size: 18px;
       font-family: Opel-Sans-Condensed-Headline;
       color: #28210e;
       text-align: center;
-      line-height: 32px;
+//      line-height: 32px;
+
+
     }
   }
 
-  $answer-height: 85px;
+  $answer-height: 51px;
   $answer-radius: 5px;
 
   .answers {
-    position: absolute;
+    position: relative;
     top: 100px;
     left: 0;
     width: $widget-width;
@@ -213,35 +270,36 @@
     .a-test {
       top: 0;
       left: 0;
-      width: 850px;
+      width: 320px;
       margin: 0 auto;
       height: $answer-height;
 
       .answer {
         height: $answer-height;
-        display: table;
-        border-collapse: separate;
-        border-spacing: 10px;
+        display: block;
+//        border-collapse: separate;
+//        border-spacing: 10px;
       }
     }
 
     .option {
-      display: table-cell;
-      width: 170px;
+      display: block;
+      width: 320px;
       text-align: center;
       height: $answer-height;
       text-decoration: none;
       vertical-align: middle;
-      font-size: 18px;
+      font-size: 20px;
       font-family: Opel-Sans-Condensed-Headline;
       color:  #28210e;
+      line-height: $answer-height;
 
       &:hover {
         background: #ffca1a;
-        border-radius: $answer-radius;
+//        border-radius: $answer-radius;
       }
 
-      transition: 0.2s all linear;
+//      transition: 0.2s all linear;
     }
   }
 
@@ -254,26 +312,26 @@
     left: 0;
 
     &.test-nav-1 {
-      background: inline('inline/test/nav-bg_1.png') 0 0 no-repeat;
+      background: inline('phone/test/nav-bg_1.png') 0 0 no-repeat;
     }
 
     &.test-nav-2 {
-      background: inline('inline/test/nav-bg_2.png') 0 0 no-repeat;
+      background: inline('phone/test/nav-bg_2.png') 0 0 no-repeat;
     }
 
     &.test-nav-3 {
-      background: inline('inline/test/nav-bg_3.png') 0 0 no-repeat;
+      background: inline('phone/test/nav-bg_3.png') 0 0 no-repeat;
     }
 
     &.test-nav-4 {
-      background: inline('inline/test/nav-bg_4.png') 0 0 no-repeat;
+      background: inline('phone/test/nav-bg_4.png') 0 0 no-repeat;
     }
 
     &.test-nav-5 {
-      background: inline('inline/test/nav-bg_5.png') 0 0 no-repeat;
+      background: inline('phone/test/nav-bg_5.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+    transition: 0.5s all linear;
   }
 }
 
@@ -282,8 +340,8 @@
 
   #map {
     width: 100%;
-    height: 182px;
-    margin-top: 68px;
+    height: 264px;
+    margin-top: 241px;
   }
 
   .map-title {
@@ -291,42 +349,56 @@
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 68px;
-    background: inline('inline/map_title_bg.png') 0 0 no-repeat;
+    height: 241px;
+    background: inline('phone/map_title_bg.png') 0 0 no-repeat;
 
     .title {
       position: absolute;
       text-align: center;
-      font-family: Opel-Sans-Condensed-Carline;
+      font-family: Opel-Sans-Condensed-Headline;
       color: #28210e;
-      font-size: 28px;
+      font-size: 36px;
       width: $widget-width;
-      top: 15px;
+      top: 80px;
+      line-height: 36px;
     }
 
   }
 
   .calendar-btn {
     bottom: 0;
-    left: 239px;
+    left: 63px;
   }
 
   .again-btn {
     bottom: 0;
-    left: 502px;
+    left: 0px;
   }
 
   .more {
-    background: inline('inline/more_bg.png') 0 0 no-repeat;
+    background: inline('phone/more_bg.png') 0 0 no-repeat;
 
     .title {
       position: absolute;
       text-align: center;
-      font-family: Opel-Sans-Condensed-Carline;
+      font-family: Opel-Sans-Condensed-Headline;
       color: #28210e;
-      font-size: 28px;
+      font-size: 36px;
       width: $widget-width;
-      top: 15px;
+      top: 80px;
+      line-height: 36px;
+    }
+
+    .content {
+      position: absolute;
+      font-size: 17px;
+      font-family: "Opel-Sans-Condensed-Headline";
+      color: rgb( 0, 0, 0 );
+      left: 21px;
+      top: 220px;
+      width: 277px;
+      height: 260px;
+
     }
 
     .more-btn {
@@ -337,13 +409,17 @@
 
 .calendar {
   display: none;
-  background: inline('inline/calendar_bg.png') 0 0 no-repeat;
+  background: inline('phone/bg_1.png') 0 0 no-repeat;
+
+  .content{
+    background: inline('phone/calendar_content.png') 0 0 no-repeat;
+  }
 
   .date{
 
     position: absolute;
-    width: 164px;
-    height: 164px;
+    width: 140px;
+    height: 140px;
     text-decoration: none;
 
     .num {
@@ -351,35 +427,36 @@
       pointer-events: none;
       font-family: "OpelSansCondensed";
       color:  #28210e;
-      font-size: 50px; /* Approximation due to font substitution */
+      font-size: 43px; /* Approximation due to font substitution */
       font-weight: 700;
       line-height: 36px; /* Approximation due to font substitution */
-      width: 164px;
+      width: 140px;
       height: 35px;
       text-decoration: none;
       text-align: center;
       position: absolute;
-      top: 37px;
+      top: 27px;
     }
 
     .mon {
       pointer-events: none;
       font-family: "OpelSansCondensed";
       color: #28210e;
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 700;
       line-height: 36px;
-      width: 164px;;
+      width: 140px;;
       height: 26px;
       text-decoration: none;
       text-align: center;
       position: absolute;
-      top: 70px;
+      top: 57px;
+
     }
 
-    background: inline('inline/date_bg.png') 0 0 no-repeat;
+    background: inline('phone/date.png') 0 0 no-repeat;
     &:hover {
-      background: inline('inline/date_bg_hover.png') 0 0 no-repeat;
+      background: inline('phone/date_hover.png') 0 0 no-repeat;
 
       .num {
         color: #FFFFFF;
@@ -390,139 +467,237 @@
       }
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .date_1 {
-    left: 118px;
-    top: 61px;
+    left: 15px;
+    top: 173px;
   }
 
   .date_2 {
-    left: 312px;
-    top: 61px;
+    left: 166px;
+    top: 173px;
   }
 
   .date_3 {
-    left: 510px;
-    top: 61px;
+    left: 15px;
+    top: 325px;
   }
 
   .date_4 {
-    left: 702px;
-    top: 61px;
+    left: 166px;
+    top: 325px;
   }
 }
 
 .about {
   display: none;
-  background: inline('inline/about_bg.png') 0 0 no-repeat;
+  background: inline('phone/bg_1.png') 0 0 no-repeat;
 
-  .start-btn {
-    bottom: 0px;
-    left: 50%;
-    margin-left: -112px;
+  .content{
+    background: inline('phone/about_content.png') 0 0 no-repeat;
+
   }
+
+//  .start-btn {
+//    bottom: 0px;
+//    left: 50%;
+//    margin-left: -112px;
+//  }
 }
 
 .rules {
   display: none;
-  background: inline('inline/rules_bg.png') 0 0 no-repeat;
+  background: inline('phone/bg_1.png') 0 0 no-repeat;
 
   .start-btn {
-    bottom: 0px;
-    left: 50%;
-    margin-left: -112px;
+    position: absolute;
+    top: 421px;
+    left: 26px;
+    width: 267px;
+    height: 52px;
+    background: inline('phone/back_btn.png') 0 0 no-repeat;
+    margin-left: 0;
+
+    &:hover {
+      background: inline('phone/back_btn_hover.png') 0 0 no-repeat;
+    }
+
+//    transition: 0.2s all linear;
+  }
+
+  .content{
+    background: inline('phone/rules_content.png') center 0 no-repeat;
+
+    .img {
+
+      width: $widget-width;
+      position: absolute;
+      left: 0;
+      top: 185px;
+
+      .r {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 150px;
+        width: $widget-width;
+        opacity: 0;
+        transition: 0.2s opacity linear;
+      }
+
+      .r_1 {
+        background: inline('phone/rule_1.png') center 0 no-repeat;
+      }
+
+      .r_2 {
+
+        background: inline('phone/rule_2.png') center 0 no-repeat;
+      }
+
+      .r_3 {
+
+        background: inline('phone/rule_3.png') center 0 no-repeat;
+      }
+
+      .r_4 {
+
+        background: inline('phone/rule_4.png') center 0 no-repeat;
+      }
+
+      .r_5 {
+
+        background: inline('phone/rule_5.png') center 0 no-repeat;
+      }
+
+      .active {
+        opacity: 1;
+      }
+
+
+    }
+  }
+
+  .nav {
+    position: absolute;
+    width: $widget-width;
+    height: 28px;
+    top: 360px;
+    left: 0;
+    padding: 0 65px;
+
+    .item {
+      display: inline-block;
+      width: 29px;
+      height: 28px;
+      background: inline('phone/circle.png') 0 0 no-repeat;
+      padding: 0 5px;
+      &:hover {
+        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+      }
+
+      &.active {
+        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+      }
+
+      transition: 0.2s background linear;
+    }
   }
 }
 
 .underlayer {
-
   .menu-icon {
-    width: 19px;
-    height: 16px;
+    width: 33px;
+    height: 26px;
     position: absolute;
-    top: 45px;
-    left: 941px;
-    background: inline('inline/menu_icon.png') 0 0 no-repeat;
+    top: 16px;
+    left: 145px;
+    background: inline('phone/menu_btn.png') 0 0 no-repeat;
     &:hover {
-      background: inline('inline/menu_icon_hover.png') 0 0 no-repeat;
+      width: 33px;
+      height: 26px;
+      background: inline('phone/menu_btn_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
+}
+
+
+
 
   .menu {
 
-    background: inline('inline/menu_bg.png') 0 -4px no-repeat;
-    width: 211px;
-    height: 250px;
+    background: inline('phone/menu_bg.jpg') 0 0px no-repeat;
     position: absolute;
-    top: 0px;
-    left: $widget-width;
-    transition: left 0.3s linear;
+    top: -504px;
+    left: 0px;
+    transition: top 0.3s linear;
+//    display: none;
 
     &.show {
-      left: 779px;
+      top: 0px;
+//      display: block;
     }
 
     .list {
       position: absolute;
-      left: 32px;
-      top: 77px;
+      left: 42px;
+      top: 47px;
 
       .l-item {
         display: block;
-        margin-bottom: 4px;
+//        margin-bottom: 4px;
       }
 
       .menu-start {
-        width: 144px;
-        height: 21px;
-        background: inline('inline/menu_text.png') 0 0px no-repeat;
+        width: 240px;
+        height: 40px;
+        background: inline('phone/menu_text.png') 0 0px no-repeat;
 
         &:hover {
-          background: inline('inline/menu_text_hover.png') 0 0px no-repeat;
+          background: inline('phone/menu_text_hover.png') 0 0px no-repeat;
         }
       }
 
       .menu-rules {
-        width: 144px;
-        height: 21px;
-        background: inline('inline/menu_text.png') 0 -25px no-repeat;
+        width: 240px;
+        height: 53px;
+        background: inline('phone/menu_text.png') 0 -40px no-repeat;
 
         &:hover {
-          background: inline('inline/menu_text_hover.png') 0 -25px no-repeat;
+          background: inline('phone/menu_text_hover.png') 0 -40px no-repeat;
         }
       }
 
       .menu-calendar {
-        width: 144px;
-        height: 21px;
-        background: inline('inline/menu_text.png') 0 -50px no-repeat;
+        width: 240px;
+        height: 53px;
+        background: inline('phone/menu_text.png') 0 -93px no-repeat;
 
         &:hover {
-          background: inline('inline/menu_text_hover.png') 0 -50px no-repeat;
+          background: inline('phone/menu_text_hover.png') 0 -93px no-repeat;
         }
       }
 
       .menu-about {
-        width: 144px;
-        height: 21px;
-        background: inline('inline/menu_text.png') 0 -75px no-repeat;
+        width: 240px;
+        height: 53px;
+        background: inline('phone/menu_text.png') 0 -146px no-repeat;
 
         &:hover {
-          background: inline('inline/menu_text_hover.png') 0 -75px no-repeat;
+          background: inline('phone/menu_text_hover.png') 0 -146px no-repeat;
         }
       }
 
       .menu-drive {
-        width: 144px;
+        width: 240px;
         height: 40px;
-        background: inline('inline/menu_text.png') 0 -100px no-repeat;
+        background: inline('phone/menu_text.png') 0 -199px no-repeat;
 
         &:hover {
-          background: inline('inline/menu_text_hover.png') 0 -100px no-repeat;
+          background: inline('phone/menu_text_hover.png') 0 -199px no-repeat;
         }
       }
 
@@ -532,32 +707,32 @@
 
       .vk {
         position: absolute;
-        top: 40px;
-        left: 62px;
+        top: 324px;
+        left: 169px;
 
-        width: 24px;
-        height: 13px;
-        background: inline('inline/vk.png') 0 0 no-repeat;
+        width: 49px;
+        height: 49px;
+        background: inline('phone/vk.png') 0 0 no-repeat;
         &:hover {
-          background: inline('inline/vk_hover.png') 0 0 no-repeat;
+          background: inline('phone/vk_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
 
       .fb {
         position: absolute;
-        top: 36px;
-        left: 38px;
+        top: 324px;
+        left: 107px;
 
-        width: 10px;
-        height: 20px;
-        background: inline('inline/fb.png') 0 0 no-repeat;
+        width: 49px;
+        height: 49px;
+        background: inline('phone/fb.png') 0 0 no-repeat;
         &:hover {
-          background: inline('inline/fb_hover.png') 0 0 no-repeat;
+          background: inline('phone/fb_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
 
       .insta {
@@ -567,28 +742,28 @@
 
         width: 20px;
         height: 20px;
-        background: inline('inline/insta.png') 0 0 no-repeat;
+//        background: inline('phone/insta.png') 0 0 no-repeat;
         &:hover {
-          background: inline('inline/insta_hover.png') 0 0 no-repeat;
+//          background: inline('phone/insta_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
     }
-
+//
     .close-menu {
       position: absolute;
-      width: 14px;
-      height: 14px;
-      top: 220px;
-      left: 183px;
-      background: inline('inline/menu_close.png') 0 0 no-repeat;
+      width: 45px;
+      height: 45px;
+      top: 420px;
+      left: 139px;
+      background: inline('phone/menu_close.png') 0 0 no-repeat;
 
       &:hover {
-        background: inline('inline/menu_close_hover.png') 0 0 no-repeat;
+        background: inline('phone/menu_close_hover.png') 0 0 no-repeat;
       }
 
-      transition: 0.2s all linear;
+//      transition: 0.2s all linear;
     }
   }
-}
+
