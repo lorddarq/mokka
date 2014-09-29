@@ -1,6 +1,8 @@
 <%
   options ||= nil
-  get_params = options ? options.slice!(:id, :width, :height, :collapsed, :semiexpanded, :expanded) : {local: 1}
+  get_params = options ? options.slice!(:id, :width, :height, :collapsed, :semiexpanded, :expanded, :path) : {local: 1}
+  path = options.delete(:path) if options
+  path ||= widget_path(get_params)
   id = options.delete(:id) if options
   id ||= "mokka_widget"
   width = options.delete(:width) if options
@@ -10,7 +12,7 @@
   options_rendered = (options && !options.empty?) ? options.to_json.sub!(/^\{/, '').sub!(/\}$/, '') : false
 %>
 
-<iframe id="<%= id %>" name="<%= id %>" src="<%= widget_path(get_params) %>" width="<%= width %>" height="<%= height %>" scrolling="no" frameborder="0" data-type="lam-widget"></iframe>
+<iframe id="<%= id %>" name="<%= id %>" src="<%= path %>" width="<%= width %>" height="<%= height %>" scrolling="no" frameborder="0" data-type="lam-widget"></iframe>
 <script>
 (function(w) {
   if(!w.LAMWidget) {
