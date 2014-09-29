@@ -173,6 +173,7 @@
   .start-btn {
     top: 175px;
     left: 39px;
+    width: 156px;
   }
 
   .orange {
@@ -352,6 +353,20 @@
       font-size: 28px;
       width: $widget-width;
       top: 15px;
+    }
+
+    .content {
+      font-size: 20px;
+      font-family: "Opel-Sans-Condensed-Headline";
+      color: rgb( 32, 22, 0 );
+      line-height: 1.2;
+      text-align: center;
+      position: absolute;
+      left: 88px;
+      top: 80px;
+      width: 810px;
+      height: 127px;
+
     }
 
     .more-btn {

@@ -519,7 +519,81 @@
   }
 
   .content{
-    background: inline('phone/rules_content.png') 0 0 no-repeat;
+    background: inline('phone/rules_content.png') center 0 no-repeat;
+
+    .img {
+
+      width: $widget-width;
+      position: absolute;
+      left: 0;
+      top: 185px;
+
+      .r {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 150px;
+        width: $widget-width;
+        opacity: 0;
+        transition: 0.2s opacity linear;
+      }
+
+      .r_1 {
+        background: inline('phone/rule_1.png') center 0 no-repeat;
+      }
+
+      .r_2 {
+
+        background: inline('phone/rule_2.png') center 0 no-repeat;
+      }
+
+      .r_3 {
+
+        background: inline('phone/rule_3.png') center 0 no-repeat;
+      }
+
+      .r_4 {
+
+        background: inline('phone/rule_4.png') center 0 no-repeat;
+      }
+
+      .r_5 {
+
+        background: inline('phone/rule_5.png') center 0 no-repeat;
+      }
+
+      .active {
+        opacity: 1;
+      }
+
+
+    }
+  }
+
+  .nav {
+    position: absolute;
+    width: $widget-width;
+    height: 28px;
+    top: 360px;
+    left: 0;
+    padding: 0 65px;
+
+    .item {
+      display: inline-block;
+      width: 29px;
+      height: 28px;
+      background: inline('phone/circle.png') 0 0 no-repeat;
+      padding: 0 5px;
+      &:active {
+        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+      }
+
+      &.active {
+        background: inline('phone/circle_hover.png') 0 0 no-repeat;
+      }
+
+      transition: 0.2s background linear;
+    }
   }
 }
 
@@ -531,11 +605,11 @@
     top: 16px;
     left: 145px;
     background: inline('phone/menu_btn.png') 0 0 no-repeat;
-    &:active {
+    &:hover {
       background: inline('phone/menu_btn_hover.png') 0 0 no-repeat;
     }
 
-//    transition: 0.2s all linear;
+    transition: 0.2s all linear;
   }
 }
 
@@ -546,13 +620,14 @@
 
     background: inline('phone/menu_bg.jpg') 0 0px no-repeat;
     position: absolute;
-    top: 0px;
+    top: -504px;
     left: 0px;
-//    transition: left 0.3s linear;
-    display: none;
+    transition: top 0.3s linear;
+//    display: none;
 
     &.show {
-      display: block;
+      top: 0px;
+//      display: block;
     }
 
     .list {

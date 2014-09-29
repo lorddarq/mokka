@@ -104,6 +104,11 @@ setTestAnswer = (index)->
 
     $('.map-title .title').html(title)
     $('.more .title').html(title)
+
+    test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
+    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — дизайнерские наклейки <br /> и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
+    $('.more .content').html(content_more)
+
     showState('.state.map')
     if !map
       map = showMap([]);
@@ -209,6 +214,17 @@ $('a.option').click (e)->
   e.preventDefault()
   MokkoEvents.answer_click.dispatch()
   setTestAnswer($(e.target).attr('data-index'))
+
+if appMode == 'phone'
+  $('.rules .nav .item').click (e)->
+    e.preventDefault()
+    index = $(e.target).attr('data-index')
+#    $('.rules .img .active').hide('fast')
+    $('.rules .img .active').removeClass('active')
+    $('.rules .img .r_' + index).addClass('active')
+
+    $('.rules .nav .active').removeClass('active')
+    $('.rules .nav .item_' + index).addClass('active')
 
 $ ->
   if widget.isLocal

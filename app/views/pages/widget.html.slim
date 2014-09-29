@@ -8,6 +8,9 @@ html
 
     = stylesheet_link_tag 'application', 'widget'
 
+    javascript:
+      appMode = 'widget'
+
     = javascript_include_tag '//maps.googleapis.com/maps/api/js?key=AIzaSyDYeTqtg8piLhZ8pwQhQYmIzvWDC1sZ5T0&sensor=true'
 
     = render "_/google_analytics"
@@ -36,6 +39,7 @@ html
             a.again-btn href="#"
             .more.bg
               .title
+              .content
               a.more-btn.close href="#"
             a.p-logo.logo target="_blank" href="http://ads.adfox.ru/5024/goLink?p1=brazc&p2=v&p5=ckzmh&pr=[RANDOM]&puid1=&puid2="
 
