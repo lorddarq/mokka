@@ -4,8 +4,17 @@
 
 widget = new Widget "Opel Mokka"
 
-widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
-widget.hasStateClass 'expanded', 'expand', { height: 250 }
+if appMode == 'widget'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
+  widget.hasStateClass 'expanded', 'expand', { height: 250 }
+
+if appMode == 'phone'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 50 }
+  widget.hasStateClass 'expanded', 'expand', { height: 1008 }
+
+if appMode == 'tablet'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
+  widget.hasStateClass 'expanded', 'expand', { height: 1024 }
 
 # widget.defaultState = 'collapsed'
 # widget.firstShowState = 'expanded'
