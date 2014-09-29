@@ -46,7 +46,7 @@
     }
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .calendar-btn {
@@ -59,7 +59,7 @@
     background: inline('phone/calendar_btn_hover.png') 0 0 no-repeat;
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .again-btn {
@@ -72,7 +72,7 @@
     background: inline('phone/again_btn_hover.png') 0 0 no-repeat;
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .more-btn {
@@ -96,7 +96,7 @@
     }
   }
 
-  transition: 0.2s all linear;
+//  transition: 0.2s all linear;
 }
 
 .page-title
@@ -128,7 +128,7 @@
       background: inline('phone/link_vk_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .fb {
@@ -143,7 +143,7 @@
       background: inline('phone/link_fb_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .insta {
@@ -158,7 +158,7 @@
       background: inline('phone/link_insta_hover.png') 0 -1px no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 }
 
@@ -299,7 +299,7 @@
 //        border-radius: $answer-radius;
       }
 
-      transition: 0.2s all linear;
+//      transition: 0.2s all linear;
     }
   }
 
@@ -331,7 +331,7 @@
       background: inline('phone/test/nav-bg_5.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+    transition: 0.5s all linear;
   }
 }
 
@@ -467,7 +467,7 @@
       }
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .date_1 {
@@ -524,7 +524,7 @@
       background: inline('phone/back_btn_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 
   .content{
@@ -593,7 +593,7 @@
       height: 28px;
       background: inline('phone/circle.png') 0 0 no-repeat;
       padding: 0 5px;
-      &:active {
+      &:hover {
         background: inline('phone/circle_hover.png') 0 0 no-repeat;
       }
 
@@ -615,10 +615,12 @@
     left: 145px;
     background: inline('phone/menu_btn.png') 0 0 no-repeat;
     &:hover {
+      width: 33px;
+      height: 26px;
       background: inline('phone/menu_btn_hover.png') 0 0 no-repeat;
     }
 
-    transition: 0.2s all linear;
+//    transition: 0.2s all linear;
   }
 }
 
@@ -715,7 +717,7 @@
           background: inline('phone/vk_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
 
       .fb {
@@ -730,7 +732,7 @@
           background: inline('phone/fb_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
 
       .insta {
@@ -745,7 +747,7 @@
 //          background: inline('phone/insta_hover.png') 0 0 no-repeat;
         }
 
-        transition: 0.2s all linear;
+//        transition: 0.2s all linear;
       }
     }
 //
@@ -761,7 +763,7 @@
         background: inline('phone/menu_close_hover.png') 0 0 no-repeat;
       }
 
-      transition: 0.2s all linear;
+//      transition: 0.2s all linear;
     }
   }
 
