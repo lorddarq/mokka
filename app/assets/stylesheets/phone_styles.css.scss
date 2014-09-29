@@ -62,19 +62,6 @@
   transition: 0.2s all linear;
 }
 
-.back-btn {
-  position: absolute;
-  width: 267px;
-  height: 52px;
-  background: inline('phone/back_btn.png') 0 0 no-repeat;
-
-  &:hover {
-    background: inline('phone/back_btn_hover.png') 0 0 no-repeat;
-  }
-
-  transition: 0.2s all linear;
-}
-
 .again-btn {
   position: absolute;
   width: 57px;
@@ -402,6 +389,18 @@
       line-height: 36px;
     }
 
+    .content {
+      position: absolute;
+      font-size: 17px;
+      font-family: "Opel-Sans-Condensed-Headline";
+      color: rgb( 0, 0, 0 );
+      left: 21px;
+      top: 220px;
+      width: 277px;
+      height: 260px;
+
+    }
+
     .more-btn {
       display: none;
     }
@@ -512,10 +511,20 @@
   display: none;
   background: inline('phone/bg_1.png') 0 0 no-repeat;
 
-  .back-btn {
+  .start-btn {
+    position: absolute;
     top: 421px;
     left: 26px;
+    width: 267px;
+    height: 52px;
+    background: inline('phone/back_btn.png') 0 0 no-repeat;
+    margin-left: 0;
 
+    &:hover {
+      background: inline('phone/back_btn_hover.png') 0 0 no-repeat;
+    }
+
+    transition: 0.2s all linear;
   }
 
   .content{

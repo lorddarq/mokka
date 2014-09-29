@@ -97,19 +97,21 @@ setTestAnswer = (index)->
   else
     #show map
     $('.map .more').hide()
+    test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
+    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — дизайнерские наклейки <br /> и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
 
     if appMode == 'phone'
       title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
+      content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + ' и выкладывай фото с ним в Instagram с #mokkagoorange. Первые десять нашедших получат приглашения<br>в интересные места Москвы, рекомендованные The Village,<br>а все авторы фотографий — дизайнерские наклейки и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
 
     $('.map-title .title').html(title)
     $('.more .title').html(title)
 
-    test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
-    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — дизайнерские наклейки <br /> и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
     $('.more .content').html(content_more)
 
     showState('.state.map')
+
     if !map
       map = showMap([]);
     renderMarkers(map, pins)
