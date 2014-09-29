@@ -108,7 +108,7 @@ setTestAnswer = (index)->
     $('.map-title .title').html(title)
     $('.more .title').html(title)
 
-    $('.more .content').html(content_more)
+    $('.more .more-content').html(content_more)
 
     showState('.state.map')
 
