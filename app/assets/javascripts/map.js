@@ -10,12 +10,25 @@ function renderMarkers(map, pins)
   }
   markers = [];
 
-  var image = {
-    url: $('#map').attr('data-pin-url'),
-    size: new google.maps.Size(28, 42),
-    origin: new google.maps.Point(0, 0),
-    anchor: new google.maps.Point(28, 42)
-  };
+  if(appMode == 'tablet')
+  {
+    var image = {
+      url: $('#map').attr('data-pin-url'),
+      size: new google.maps.Size(69, 97),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(69, 97)
+    };
+  }
+  else
+  {
+    var image = {
+      url: $('#map').attr('data-pin-url'),
+      size: new google.maps.Size(28, 42),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(28, 42)
+    };
+  }
+
 
   var pinMarker;
   $.each(pins, function(index, pin)
@@ -36,11 +49,32 @@ function renderMarkers(map, pins)
         infoBox.remove();
       });
       _mapInfoBoxes = [];
-      _mapInfoBoxes.push( new InfoBox({
-        latlng: new google.maps.LatLng(pin.lat, pin.lng),
-        map: map,
-        content: '<div class="yel">' + pin.time + '</div>'
-      }) );
+      if(appMode == 'tablet')
+      {
+        var opts = {
+          latlng: new google.maps.LatLng(pin.lat, pin.lng),
+          map: map,
+          content: '<div class="yel">' + pin.time + '</div>',
+          offsetVertical_: -109,
+          offsetHorizontal_: -141,
+          height_: 127,
+          width_: 212
+        };
+      }
+      else
+      {
+        var opts = {
+          latlng: new google.maps.LatLng(pin.lat, pin.lng),
+          map: map,
+          content: '<div class="yel">' + pin.time + '</div>',
+          offsetVertical_: -46,
+          offsetHorizontal_: -52,
+          height_: 46,
+          width_: 77
+        };
+      }
+
+      _mapInfoBoxes.push( new InfoBox(opts) );
     });
 
     google.maps.event.addListener(pinMarker, 'mouseout', function(e) {
@@ -104,10 +138,10 @@ function InfoBox(opts) {
   this.latlng_ = opts.latlng;
   this.map_ = opts.map;
   this.content_ = opts.content;
-  this.offsetVertical_ = -46;
-  this.offsetHorizontal_ = -52;
-  this.height_ = 46;
-  this.width_ = 77;
+  this.offsetVertical_ = opts.offsetVertical_;
+  this.offsetHorizontal_ =  opts.offsetHorizontal_;
+  this.height_ = opts.height_;
+  this.width_ = opts.width_;
 
   this.removed_ = false;
 

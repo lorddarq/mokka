@@ -19,6 +19,12 @@ class PagesController < ApplicationController
   def debug
   end
 
+  def debug_tablet
+  end
+
+  def debug_phone
+  end
+
   def index
   end
 

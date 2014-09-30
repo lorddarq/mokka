@@ -4,8 +4,17 @@
 
 widget = new Widget "Opel Mokka"
 
-widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
-widget.hasStateClass 'expanded', 'expand', { height: 250 }
+if appMode == 'widget'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
+  widget.hasStateClass 'expanded', 'expand', { height: 250 }
+
+if appMode == 'phone'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 50 }
+  widget.hasStateClass 'expanded', 'expand', { height: 504 }
+
+if appMode == 'tablet'
+  widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
+  widget.hasStateClass 'expanded', 'expand', { height: 1024 }
 
 # widget.defaultState = 'collapsed'
 # widget.firstShowState = 'expanded'
@@ -28,6 +37,13 @@ map_title = ['правильных ответов',
              'правильных ответа',
              'правильных ответа',
              'правильных ответов']
+
+map_title_phone = ['правильных<br />ответов',
+             'правильный<br /> ответ',
+             'правильных<br /> ответа',
+             'правильных<br /> ответа',
+             'правильных<br /> ответа',
+             'правильных<br /> ответов']
 
 closeMenu = ->
   $('.menu').removeClass('show')
@@ -76,7 +92,6 @@ setTestAnswer = (index)->
   #check answer by test_id and question
   console.log(test_id, question)
 
-
   answer = $('.a-test-'+test_id+' .answer-'+question)
 
   if answer.attr('data-check') == index
@@ -90,10 +105,24 @@ setTestAnswer = (index)->
   else
     #show map
     $('.map .more').hide()
+    test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
-    $('.map-title .title').text(title)
-    $('.more .title').text(title)
+    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
+
+    if appMode == 'tablet'
+      title = 'У тебя '+ pins.length + '<br>' + map_title[pins.length];
+
+    if appMode == 'phone'
+      title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
+      content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + ' и выкладывай фото с ним в Instagram с #mokkagoorange. Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
+
+    $('.map-title .title').html(title)
+    $('.more .title').html(title)
+
+    $('.more .more-content').html(content_more)
+
     showState('.state.map')
+
     if !map
       map = showMap([]);
     renderMarkers(map, pins)
@@ -198,6 +227,17 @@ $('a.option').click (e)->
   e.preventDefault()
   MokkoEvents.answer_click.dispatch()
   setTestAnswer($(e.target).attr('data-index'))
+
+if appMode == 'phone' || appMode == 'tablet'
+  $('.rules .nav .item').click (e)->
+    e.preventDefault()
+    index = $(e.target).attr('data-index')
+#    $('.rules .img .active').hide('fast')
+    $('.rules .img .active').removeClass('active')
+    $('.rules .img .r_' + index).addClass('active')
+
+    $('.rules .nav .active').removeClass('active')
+    $('.rules .nav .item_' + index).addClass('active')
 
 $ ->
   if widget.isLocal
