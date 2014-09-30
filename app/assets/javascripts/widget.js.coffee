@@ -92,7 +92,6 @@ setTestAnswer = (index)->
   #check answer by test_id and question
   console.log(test_id, question)
 
-
   answer = $('.a-test-'+test_id+' .answer-'+question)
 
   if answer.attr('data-check') == index
@@ -109,6 +108,9 @@ setTestAnswer = (index)->
     test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
     content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — дизайнерские наклейки <br /> и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
+
+    if appMode == 'tablet'
+      title = 'У тебя '+ pins.length + '<br>' + map_title[pins.length];
 
     if appMode == 'phone'
       title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
@@ -226,7 +228,7 @@ $('a.option').click (e)->
   MokkoEvents.answer_click.dispatch()
   setTestAnswer($(e.target).attr('data-index'))
 
-if appMode == 'phone'
+if appMode == 'phone' || appMode == 'tablet'
   $('.rules .nav .item').click (e)->
     e.preventDefault()
     index = $(e.target).attr('data-index')
