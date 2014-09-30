@@ -530,9 +530,22 @@
     background: inline('tablet/about_content_bg.png') 0 0 no-repeat;
 
   }
-
+//
   .content-title {
     top: 195px;
+  }
+
+  .content-text {
+    position: absolute;
+    top: 530px;
+    left: 78px;
+    width: 620px;
+    height: 220px;
+    font-size: 23px;
+    font-family: "Opel-Sans-Condensed-Headline";
+    color: rgb( 0, 0, 0 );
+    text-align: center;
+    line-height: 32px;
   }
 
   .start-btn {

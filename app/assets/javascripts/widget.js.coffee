@@ -107,14 +107,14 @@ setTestAnswer = (index)->
     $('.map .more').hide()
     test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
-    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — дизайнерские наклейки <br /> и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
+    content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
 
     if appMode == 'tablet'
       title = 'У тебя '+ pins.length + '<br>' + map_title[pins.length];
 
     if appMode == 'phone'
       title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
-      content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + ' и выкладывай фото с ним в Instagram с #mokkagoorange. Первые десять нашедших получат приглашения<br>в интересные места Москвы, рекомендованные The Village,<br>а все авторы фотографий — дизайнерские наклейки и шанс выиграть главный приз — годовой абонемент на парковку в центре.'
+      content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + ' и выкладывай фото с ним в Instagram с #mokkagoorange. Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
 
     $('.map-title .title').html(title)
     $('.more .title').html(title)
