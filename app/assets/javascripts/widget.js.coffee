@@ -242,6 +242,11 @@ if appMode == 'phone' || appMode == 'tablet'
 $ ->
   if widget.isLocal
     window.parent.postMessage('widget_inited', '*')
+  else
+    if appMode == 'widget'
+      adfox = 'http://ads.adfox.ru/5024/goLink?p1=bdxfw&p2=v&p5=cleac&pr=[RANDOM]&puid1=&puid2='
+      $('.p-logo').attr('href', adfox)
+      $('.orange').attr('href', adfox)
 
 eventsTracker = new EventsTracker widget
 eventsTracker.mapEventsToSignals
