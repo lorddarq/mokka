@@ -22,8 +22,8 @@ $g-sprite-dimensions: true;
 /* @import "widget_base"; */
 
 @include widget-states(
-  collapsed 768px 90px,
-  expanded 768px 1024px
+  collapsed 1024px 90px,
+  expanded 1024px 768px
 );
 $default-state: collapsed;
 
@@ -72,14 +72,14 @@ body {
     left: 0;
     top: 0;
     width: $widget-width;
-    height: 1024px;
+    height: 768px;
 
   }
 }
-
+//fix bug -1000px
 .b-widget_collapsed {
   .b-view_expanded{
-    top: -1024px;
+    top: -1300px;
   }
 }
 

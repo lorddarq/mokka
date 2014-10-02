@@ -14,7 +14,7 @@ if appMode == 'phone'
 
 if appMode == 'tablet'
   widget.hasStateClass 'collapsed', 'collapse', { height: 90 }
-  widget.hasStateClass 'expanded', 'expand', { height: 1024 }
+  widget.hasStateClass 'expanded', 'expand', { height: 768 }
 
 # widget.defaultState = 'collapsed'
 # widget.firstShowState = 'expanded'
@@ -109,8 +109,8 @@ setTestAnswer = (index)->
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
     content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
 
-    if appMode == 'tablet'
-      title = 'У тебя '+ pins.length + '<br>' + map_title[pins.length];
+#    if appMode == 'tablet'
+#      title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
 
     if appMode == 'phone'
       title = 'У тебя<br />'+ pins.length + ' ' + map_title_phone[pins.length];
