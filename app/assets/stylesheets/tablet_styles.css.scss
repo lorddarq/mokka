@@ -345,7 +345,7 @@
       border-top: 1px solid rgba(255,255,255, 0.5);
       border-bottom: 1px solid rgba(255,255,255, 0.5);
 
-      &:hover {
+      &:hover, &:active {
         background: #ffca1a;
 //        border-radius: $answer-radius;
       }
