@@ -50,6 +50,7 @@ body {
   width: 566px;
   height: 417px;
   background: inline('2/car.png') center center no-repeat;
+  margin-bottom: 110px;
 }
 
 .social-links {
@@ -104,6 +105,136 @@ body {
   }
 
 }
+
+//
+.final {
+
+  position: relative;
+  width: 990px;
+  left: 50%;
+  margin-left: -485px;
+  height: 780px;
+
+  .title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    font-family: OpelSansCondensed;
+    color: rgb( 228, 67, 39 );
+    margin-bottom: 55px;
+  }
+
+  .steps {
+    position: relative;
+    text-align: center;
+  }
+
+  .step {
+    display: inline-block;
+    height: 34px;
+    border-radius: 34px;
+    background: #fdca40;
+    opacity: 0.6;
+    font-size: 18.05px;
+    font-family: OpelSansCondensedCarline;
+    color: rgb( 37, 27, 6 );
+    text-align: center;
+    padding: 0 20px;
+    line-height: 34px;
+    text-decoration: none;
+    margin: 0 22px;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+
+      &:hover {
+        color: #FFFFFF;
+        background: #e44327;
+      }
+    }
+
+    &.selected {
+      opacity: 1;
+      color: #FFFFFF;
+      background: #e44327;
+    }
+  }
+
+  .users {
+    position: relative;
+    width: 100%;
+    top: 48px;
+  }
+
+  .user {
+
+    position: absolute;
+    width: 259px;
+    height: 259px;
+    background: inline('2/winner_bg.png') 0 0 no-repeat;
+
+    .like {
+      left: 186px;
+      top: 204px;
+      position: absolute;
+      width: 50px;
+      height: 46px;
+      background: inline('2/like.png') 0 0 no-repeat;
+      font-family: OpelSansCondensed;
+      color: rgb( 38, 28, 7 );
+      font-size: 24px;
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .nick {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      font-family: OpelSansCondensed;
+      color: #e44327;
+      text-decoration: none;
+      top: 285px;
+    }
+
+    .img {
+      position: absolute;
+      width: 235px;
+      height: 235px;
+      border-radius: 235px;
+      left: 13px;
+      top: 13px;
+    }
+
+    &.user_1 {
+      left: 45px;
+      top: 0px;
+    }
+    &.user_2 {
+      left: 355px;
+      top: 0px;
+    }
+    &.user_3 {
+      left: 665px;
+      top: 0px;
+    }
+    &.user_4 {
+      left: 200px;
+      top: 330px;
+    }
+    &.user_5 {
+      left: 510px;
+      top: 330px;
+    }
+  }
+
+}
+
+
 
 
 
