@@ -105,7 +105,7 @@ setTestAnswer = (index)->
   else
     #show map
     $('.map .more').hide()
-    test_date = $('.calendar .date_'+test_id).find('.num').text() + ' ' + $('.calendar .date_'+test_id).find('.mon').text()
+    test_date = $('.date*[data-test="' + test_id + '"]').find('.num').text() + ' ' + $('.date*[data-test="' + test_id + '"]').find('.mon').text()
     title = 'У тебя '+ pins.length + ' ' + map_title[pins.length];
     content_more = 'Ищи здесь Opel Mokka Moscow Edition ' + test_date + '<br/> и выкладывай фото с ним в Instagram с #mokkagoorange. <br /> Первые десять нашедших получат приглашения в интересные места Москвы, рекомендованные The Village, а все авторы фотографий — шанс выиграть главный приз, годовой абонемент на парковку в центре. Гарантированный подарок всем, кто найдёт Opel Mokka 77 на улицах Москвы, — дизайнерские наклейки на автомобиль.'
 
