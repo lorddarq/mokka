@@ -411,8 +411,36 @@
   display: none;
   background: inline('phone/bg_1.png') 0 0 no-repeat;
 
+  .arrow-left {
+    left: 9px;
+    top: 301px;
+    position: absolute;
+    width: 16px;
+    height: 28px;
+    background: inline('phone/left_arrow.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('phone/left_arrow.png') 0 0 no-repeat;
+    }
+  }
+
+  .arrow-right {
+    left: 295px;
+    top: 301px;
+    position: absolute;
+    width: 16px;
+    height: 28px;
+    background: inline('phone/right_arrow.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('phone/right_arrow.png') 0 0 no-repeat;
+    }
+    display: none;
+  }
+
   .content{
     background: inline('phone/calendar_content.png') 0 0 no-repeat;
+
+
   }
 
   .date{
@@ -421,6 +449,8 @@
     width: 140px;
     height: 140px;
     text-decoration: none;
+    transform: scale(0.9);
+    transition: 0.3s all linear;
 
     .num {
 
@@ -473,21 +503,54 @@
   .date_1 {
     left: 15px;
     top: 173px;
+
+    &.left {
+      left: -985px;
+      top: 173px;
+    }
+    &.right {
+      left: 1015px;
+      top: 173px;
+    }
   }
 
   .date_2 {
     left: 166px;
     top: 173px;
+    &.left {
+      left: -834px;
+      top: 173px;
+    }
+    &.right {
+      left: 1166px;
+      top: 173px;
+    }
   }
 
   .date_3 {
     left: 15px;
     top: 325px;
+    &.left {
+      left: -985px;
+      top: 325px;
+    }
+    &.right {
+      left: 1015px;
+      top: 325px;
+    }
   }
 
   .date_4 {
     left: 166px;
     top: 325px;
+    &.left {
+      left: -834px;
+      top: 325px;
+    }
+    &.right {
+      left: 1166px;
+      top: 325px;
+    }
   }
 }
 

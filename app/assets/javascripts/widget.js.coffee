@@ -99,7 +99,7 @@ setTestAnswer = (index)->
     pins.push({ lng: answer.attr('data-lng'), lat: answer.attr('data-lat'), time: answer.attr('data-time') })
 
   question++;
-  if question <= 5
+  if question <= $('.a-test-' + test_id + ' .answer').size()
     #show next question
     showTestQuestion()
   else
@@ -220,6 +220,20 @@ $('.calendar .date').click (e)->
   MokkoEvents.calendar_date_click.dispatch()
   test_id = $(e.target).attr('data-test')
   showTest()
+
+$('.calendar .arrow-left').click (e)->
+  e.preventDefault()
+  $('.calendar .date.show').addClass('right').removeClass('show')
+  $('.calendar .date.left').removeClass('left').addClass('show')
+  $('.arrow-left').hide()
+  $('.arrow-right').show()
+
+$('.calendar .arrow-right').click (e)->
+  e.preventDefault()
+  $('.calendar .date.show').addClass('left').removeClass('show')
+  $('.calendar .date.right').removeClass('right').addClass('show')
+  $('.arrow-left').show()
+  $('.arrow-right').hide()
 
 # test answer click
 

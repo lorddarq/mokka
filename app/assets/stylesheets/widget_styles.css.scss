@@ -379,12 +379,41 @@
   display: none;
   background: inline('inline/calendar_bg.png') 0 0 no-repeat;
 
+  .arrow-left {
+    left: 40px;
+    top: 103px;
+    position: absolute;
+    width: 24px;
+    height: 43px;
+    background: inline('inline/left_arrow.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('inline/left_arrow_hover.png') 0 0 no-repeat;
+    }
+  }
+
+  .arrow-right {
+    left: 926px;
+    top: 103px;
+    position: absolute;
+    width: 24px;
+    height: 43px;
+    background: inline('inline/right_arrow.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('inline/right_arrow_hover.png') 0 0 no-repeat;
+    }
+
+    display: none;
+  }
+
   .date{
 
     position: absolute;
     width: 164px;
     height: 164px;
     text-decoration: none;
+    transition: 0.3s all linear;
 
     .num {
 
@@ -436,21 +465,62 @@
   .date_1 {
     left: 118px;
     top: 61px;
+
+    &.left {
+      left: -1882px;
+      top: 61px;
+    }
+
+    &.right {
+      left: 2118px;
+      top: 61px;
+    }
+
   }
 
   .date_2 {
     left: 312px;
     top: 61px;
+
+    &.left {
+      left: -1688px;
+      top: 61px;
+    }
+
+    &.right {
+      left: 2312px;
+      top: 61px;
+    }
   }
 
   .date_3 {
     left: 510px;
     top: 61px;
+
+    &.left {
+      left: -1490px;
+      top: 61px;
+    }
+
+    &.right {
+      left: 2510px;
+      top: 61px;
+    }
   }
 
   .date_4 {
     left: 702px;
     top: 61px;
+
+    &.left {
+      left: -1298px;
+      top: 61px;
+    }
+
+    &.right {
+      left: 2702px;
+      top: 61px;
+    }
   }
 }
 

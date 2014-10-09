@@ -468,6 +468,31 @@
     background: inline('tablet/more_content_bg.png') center 515px no-repeat;
   }
 
+  .arrow-left {
+    left: 23px;
+    top: 343px;
+    position: absolute;
+    width: 34px;
+    height: 61px;
+    background: inline('tablet/left_arrow.png') 0 0 no-repeat;
+
+    &:hover {
+      background: inline('tablet/left_arrow.png') 0 0 no-repeat;
+    }
+  }
+
+  .arrow-right {
+    left: 965px;
+    top: 343px;
+    position: absolute;
+    width: 34px;
+    height: 61px;
+    background: inline('tablet/right_arrow.png') 0 0 no-repeat;
+    &:hover {
+      background: inline('tablet/right_arrow.png') 0 0 no-repeat;
+    }
+    display: none;
+  }
 
   .date{
 
@@ -475,6 +500,8 @@
     width: 215px;
     height: 215px;
     text-decoration: none;
+    transform: scale(0.9);
+    transition: 0.3s all linear;
 
     .num {
 
@@ -525,23 +552,63 @@
   }
 
   .date_1 {
-    left: 42px;
+    left: 87px;
     top: 266px;
+
+    &.left {
+      left: -1913px;
+      top: 266px;
+    }
+
+    &.right {
+      left: 2087px;
+      top: 266px;
+    }
   }
 
   .date_2 {
-    left: 282px;
+    left: 297px;
     top: 266px;
+
+    &.left {
+      left: -1703px;
+      top: 266px;
+    }
+
+    &.right {
+      left: 2297px;
+      top: 266px;
+    }
   }
 
   .date_3 {
-    left: 524px;
+    left: 509px;
     top: 266px;
+
+    &.left {
+      left: -1491px;
+      top: 266px;
+    }
+
+    &.right {
+      left: 2509px;
+      top: 266px;
+    }
   }
 
   .date_4 {
-    left: 767px;
+    left: 722px;
     top: 266px;
+
+    &.left {
+      left: -1278px;
+      top: 266px;
+    }
+
+    &.right {
+      left: 2722px;
+      top: 266px;
+    }
   }
 }
 
