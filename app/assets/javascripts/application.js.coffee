@@ -21,3 +21,12 @@ receiveMessage = (event)->
 
 window.addEventListener("message", receiveMessage, false);
 
+$ ->
+  $('.steps .active').click (e)->
+    e.preventDefault()
+    index = $(e.target).attr('data-index')
+    $('.steps .selected').removeClass('selected')
+    $('.steps .active*[data-index='+index+']').addClass('selected')
+    $('.users').hide()
+    $('.users*[data-index='+index+']').show()
+
