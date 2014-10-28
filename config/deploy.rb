@@ -9,7 +9,7 @@ set :use_sudo, true
 
 ssh_options[:paranoid] = false
 
-role :rails, '144.76.29.15:58023', '188.127.243.155:58022', :primary => true
+role :rails, '144.76.29.15:58023', '144.76.29.25', :primary => true
 role :db, '144.76.29.15:58023'
 
 alias :old_run :run
